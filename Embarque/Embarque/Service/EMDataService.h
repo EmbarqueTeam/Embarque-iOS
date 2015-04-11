@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface EMDataService : NSObject
 
-+ (void)getAllAirportsWithBlock:(void (^)(NSArray *airports, bool success))blockName;
++ (void)getAllAirportsWithBlock:(PFArrayResultBlock)block;
 
 @end

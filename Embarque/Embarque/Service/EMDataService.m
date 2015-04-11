@@ -7,19 +7,32 @@
 //
 
 #import "EMDataService.h"
-#import <Parse/Parse.h>
 #import "EMAirport.h"
 
 @implementation EMDataService
 
-+ (void)getAllAirportsWithBlock:(void (^)(NSArray *airports, bool success))block{
+
++ (void)getAllAirportsWithBlock:(PFArrayResultBlock)block
+{
     PFQuery *query = [PFQuery queryWithClassName:@"Airport"];
+    
+    [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
+    
+    [query findObjectsInBackgroundWithBlock:block];
+}
+
++ (void)old_getAllAirportsWithBlock:(void (^)(NSArray *airports, bool success))block
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Airport"];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             block(objects, true);
         } else {
             // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            if (DEBUG) {
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
             
             block(nil, false);
         }

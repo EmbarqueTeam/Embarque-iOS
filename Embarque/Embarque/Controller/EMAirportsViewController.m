@@ -15,7 +15,8 @@
 @interface EMAirportsViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSArray *arrayDataSource;
+@property (strong, nonatomic) NSMutableArray *arrayDataSource;
+@property (assign, nonatomic) BOOL isLoading;
 
 @end
 
@@ -23,9 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.arrayDataSource = [NSMutableArray new];
+    
     [self registerCellNib];
     [self loadAirports];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,9 +43,21 @@
 
 - (void)loadAirports
 {
-    [EMDataService getAllAirportsWithBlock:^(NSArray *airports, bool success) {
-        self.arrayDataSource = airports;
-        [self.collectionView reloadData];
+    self.isLoading = TRUE;
+    
+    [EMDataService getAllAirportsWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            [self.arrayDataSource removeAllObjects];
+            [self.arrayDataSource addObjectsFromArray:objects];
+
+            [self.collectionView reloadData];
+        }else{
+            if (DEBUG) {
+                NSLog(@"%@", error.localizedDescription);
+            }
+        }
+        
+        self.isLoading = FALSE;
     }];
 }
 
