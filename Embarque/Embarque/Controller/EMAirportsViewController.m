@@ -28,6 +28,20 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)registerCellNib
+{
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CellAirport" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"CellAirport"];
+}
+
+- (void)loadAirports
+{
+    [EMDataService getAllAirportsWithBlock:^(NSArray *airports, bool success) {
+        self.dataSource = airports;
+        [self.collectionView reloadData];
+    }];
+}
+
+#pragma mark - UICollectionView DataSource and Delegates
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.dataSource.count;
@@ -49,16 +63,9 @@
     return cell;
 }
 
--(void)registerCellNib
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.collectionView registerNib:[UINib nibWithNibName:@"CellAirport" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"CellAirport"];
+    [self performSegueWithIdentifier:@"FeedSegue" sender:nil];
 }
 
-- (void)loadAirports
-{
-    [EMDataService getAllAirportsWithBlock:^(NSArray *airports, bool success) {
-        self.dataSource = airports;
-        [self.collectionView reloadData];
-    }];
-}
 @end
