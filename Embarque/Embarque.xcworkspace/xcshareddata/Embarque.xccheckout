@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>468318E6-7F84-4D73-B13C-B8FD2B43AF9C</string>
+	<string>8A1FC512-EC34-4FAF-ACE2-EFBB09C0186A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Embarque</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>433FD5659B7B46F03DDB6DCA66A2C80725A8D9EB</key>
-		<string>https://github.com/EmbarqueTeam/Embarque-iOS.git</string>
+		<string>github.com:EmbarqueTeam/Embarque-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Embarque/Embarque.xcworkspace</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/EmbarqueTeam/Embarque-iOS.git</string>
+	<string>github.com:EmbarqueTeam/Embarque-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
