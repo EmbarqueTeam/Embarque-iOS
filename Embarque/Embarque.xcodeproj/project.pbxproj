@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20E67242ED49EFBFC76CBC3F /* libPods-Embarque.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F22208933B9394CA88667152 /* libPods-Embarque.a */; };
+		A789D01F1AD9D57D00F9638E /* EMFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D01E1AD9D57D00F9638E /* EMFeedViewController.m */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		4BE155908C67D7F1762C7185 /* Pods-Embarque.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embarque.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Embarque/Pods-Embarque.debug.xcconfig"; sourceTree = "<group>"; };
 		A5E6299B68433D8825154728 /* Pods-Embarque.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embarque.release.xcconfig"; path = "Pods/Target Support Files/Pods-Embarque/Pods-Embarque.release.xcconfig"; sourceTree = "<group>"; };
+		A789D01D1AD9D57D00F9638E /* EMFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFeedViewController.h; sourceTree = "<group>"; };
+		A789D01E1AD9D57D00F9638E /* EMFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFeedViewController.m; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 			children = (
 				BAFE545E1AD992B50095706C /* EMAirportsViewController.h */,
 				BAFE545F1AD992B50095706C /* EMAirportsViewController.m */,
+				A789D01D1AD9D57D00F9638E /* EMFeedViewController.h */,
+				A789D01E1AD9D57D00F9638E /* EMFeedViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */,
 				BA6B59221AD9507F00FC78F1 /* main.m in Sources */,
 				BAFE54561AD97B380095706C /* EMDataService.m in Sources */,
+				A789D01F1AD9D57D00F9638E /* EMFeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
