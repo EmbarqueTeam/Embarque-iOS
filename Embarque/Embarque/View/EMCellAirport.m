@@ -7,7 +7,17 @@
 //
 
 #import "EMCellAirport.h"
+#import "EMAirport.h"
+#import <UIImageView+WebCache.h>
 
 @implementation EMCellAirport
+
+-(void)configureWithObject:(id)object target:(id)target indexPath:(NSIndexPath *)indexPath
+{
+    if (object && [object isKindOfClass:[EMAirport class]]) {
+        self.name.text = [(EMAirport *)object name];
+        [self.cover sd_setImageWithURL:[(EMAirport *) object coverURL]];
+    }
+}
 
 @end

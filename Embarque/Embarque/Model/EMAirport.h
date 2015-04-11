@@ -15,4 +15,5 @@
 @property (strong, nonatomic) PFGeoPoint *location;
 @property (strong, nonatomic) PFFile *cover;
 
+-(NSURL *)coverURL;
 @end

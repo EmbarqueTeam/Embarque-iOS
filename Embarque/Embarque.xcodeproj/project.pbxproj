@@ -16,8 +16,9 @@
 		BA6B593C1AD9507F00FC78F1 /* EmbarqueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B593B1AD9507F00FC78F1 /* EmbarqueTests.m */; };
 		BAFE54521AD979840095706C /* EMAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE54511AD979840095706C /* EMAirport.m */; };
 		BAFE54561AD97B380095706C /* EMDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE54551AD97B380095706C /* EMDataService.m */; };
-		BAFE54581AD98EF10095706C /* CellAirport.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFE54571AD98EF10095706C /* CellAirport.xib */; };
 		BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE545B1AD990850095706C /* EMCellAirport.m */; };
+		BAFE54601AD992B50095706C /* EMAirportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE545F1AD992B50095706C /* EMAirportsViewController.m */; };
+		BAFE54621AD9970B0095706C /* CellAirport.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFE54611AD9970B0095706C /* CellAirport.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +49,11 @@
 		BAFE54511AD979840095706C /* EMAirport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAirport.m; path = Model/EMAirport.m; sourceTree = "<group>"; };
 		BAFE54541AD97B380095706C /* EMDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMDataService.h; path = Service/EMDataService.h; sourceTree = "<group>"; };
 		BAFE54551AD97B380095706C /* EMDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMDataService.m; path = Service/EMDataService.m; sourceTree = "<group>"; };
-		BAFE54571AD98EF10095706C /* CellAirport.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellAirport.xib; path = View/CellAirport.xib; sourceTree = "<group>"; };
 		BAFE545A1AD990850095706C /* EMCellAirport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCellAirport.h; path = View/EMCellAirport.h; sourceTree = "<group>"; };
 		BAFE545B1AD990850095706C /* EMCellAirport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCellAirport.m; path = View/EMCellAirport.m; sourceTree = "<group>"; };
+		BAFE545E1AD992B50095706C /* EMAirportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAirportsViewController.h; path = Controller/EMAirportsViewController.h; sourceTree = "<group>"; };
+		BAFE545F1AD992B50095706C /* EMAirportsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAirportsViewController.m; path = Controller/EMAirportsViewController.m; sourceTree = "<group>"; };
+		BAFE54611AD9970B0095706C /* CellAirport.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellAirport.xib; path = View/CellAirport.xib; sourceTree = "<group>"; };
 		F22208933B9394CA88667152 /* libPods-Embarque.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Embarque.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +116,7 @@
 		BA6B591E1AD9507F00FC78F1 /* Embarque */ = {
 			isa = PBXGroup;
 			children = (
+				BAFE545D1AD9928B0095706C /* Controller */,
 				BAFE54591AD98EF70095706C /* View */,
 				BAFE54531AD97AE90095706C /* Service */,
 				BAFE544F1AD978A80095706C /* Model */,
@@ -173,11 +177,20 @@
 		BAFE54591AD98EF70095706C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BAFE54571AD98EF10095706C /* CellAirport.xib */,
 				BAFE545A1AD990850095706C /* EMCellAirport.h */,
 				BAFE545B1AD990850095706C /* EMCellAirport.m */,
+				BAFE54611AD9970B0095706C /* CellAirport.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		BAFE545D1AD9928B0095706C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAFE545E1AD992B50095706C /* EMAirportsViewController.h */,
+				BAFE545F1AD992B50095706C /* EMAirportsViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */,
-				BAFE54581AD98EF10095706C /* CellAirport.xib in Resources */,
+				BAFE54621AD9970B0095706C /* CellAirport.xib in Resources */,
 				BA6B59301AD9507F00FC78F1 /* LaunchScreen.xib in Resources */,
 				BA6B592D1AD9507F00FC78F1 /* Images.xcassets in Resources */,
 			);
@@ -316,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFE54601AD992B50095706C /* EMAirportsViewController.m in Sources */,
 				BAFE54521AD979840095706C /* EMAirport.m in Sources */,
 				BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */,
 				BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */,

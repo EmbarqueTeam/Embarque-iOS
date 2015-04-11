@@ -24,4 +24,9 @@
 {
     return [NSString stringWithFormat:@"[AIRPORT] %@ - %@", self.name, self.city];
 }
+
+-(NSURL *)coverURL
+{
+    return [NSURL URLWithString:self.cover.url];
+}
 @end
