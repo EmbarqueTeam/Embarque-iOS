@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UIImageView+WebCache.h>
 
 @interface EMCellAirport : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *cover;

@@ -8,7 +8,6 @@
 
 #import "EMCellAirport.h"
 #import "EMAirport.h"
-#import <UIImageView+WebCache.h>
 
 @implementation EMCellAirport
 
