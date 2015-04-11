@@ -20,4 +20,8 @@
     return @"Airport";
 }
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"[AIRPORT] %@ - %@", self.name, self.city];
+}
 @end

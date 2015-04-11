@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-
+#import "EMDataService.h"
+#import "EMAirport.h"
 @interface AppDelegate ()
 
 @end
@@ -17,13 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [EMAirport registerSubclass];
     
-    
-    // Initialize Parse.
     [Parse setApplicationId:@"KEnFNcnLArxlllOus00LNLjM6KosLi11tTJn7Aes"
                   clientKey:@"ZefV9QEgxnAnsHS8im6sg0R49evcyYOKVTWWsFDb"];
     
-    // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
