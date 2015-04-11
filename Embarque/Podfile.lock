@@ -1,5 +1,13 @@
 PODS:
+  - Appirater (2.0.4)
+  - Block-KVO (2.2.1)
   - Bolts (1.1.4)
+  - GoogleAnalytics-iOS-SDK (3.10):
+    - GoogleAnalytics-iOS-SDK/Core (= 3.10)
+  - GoogleAnalytics-iOS-SDK/Core (3.10)
+  - Lockbox (2.1.0)
+  - MXGoogleAnalytics (1.0.1):
+    - GoogleAnalytics-iOS-SDK (~> 3.10)
   - Parse (1.7.1):
     - Bolts (~> 1.1)
   - SDWebImage (3.7.2):
@@ -7,11 +15,20 @@ PODS:
   - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
+  - Appirater
+  - Block-KVO
+  - Lockbox
+  - MXGoogleAnalytics
   - Parse (~> 1.7)
   - SDWebImage (~> 3.7)
 
 SPEC CHECKSUMS:
+  Appirater: 8783318c36414e8de3ea023443028df94c1b784b
+  Block-KVO: 64b63a4bde798ab43caa221db916192cee731886
   Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  GoogleAnalytics-iOS-SDK: 4f98a376c1d61e6ac4ca47951655820314856eef
+  Lockbox: 16442da35d9d4286966936763be728a931d589c3
+  MXGoogleAnalytics: 9029d27e6e1f0a4edc2b9e97d00566e634fa3a80
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 

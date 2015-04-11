@@ -15,6 +15,7 @@
 @interface EMAirportsViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UIView *viewLoading;
 @property (strong, nonatomic) NSMutableArray *arrayDataSource;
 @property (assign, nonatomic) BOOL isLoading;
 
@@ -28,6 +29,13 @@
     self.arrayDataSource = [NSMutableArray new];
     
     [self registerCellNib];
+    [self configScreen];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
     [self loadAirports];
 }
 
@@ -36,9 +44,22 @@
 }
 
 #pragma mark - Methods
--(void)registerCellNib
+- (void)registerCellNib
 {
     [self.collectionView registerNib:[UINib nibWithNibName:CELL_AIRPORT bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_AIRPORT];
+}
+
+- (void)configScreen
+{
+    self.collectionView.alpha = 0.0f;
+    
+    [self observeProperty:NSStringFromSelector(@selector(isLoading))
+                withBlock:^(__weak EMAirportsViewController *self, id old, id new) {
+                    if (!self.isLoading) {
+                        self.collectionView.alpha = 1.0f;
+                        self.viewLoading.alpha = 0.0f;
+                    }
+                }];
 }
 
 - (void)loadAirports

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A9A7EF23036548E7B63FFCE"
+               BlueprintIdentifier = "6C97D09D32DF6C487D5F022A"
                BuildableName = "libPods-Embarque-Parse.a"
                BlueprintName = "Pods-Embarque-Parse"
                ReferencedContainer = "container:Pods.xcodeproj">

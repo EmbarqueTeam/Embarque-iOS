@@ -7,6 +7,10 @@ target 'Embarque' do
 
 pod 'Parse', '~> 1.7'
 pod 'SDWebImage', '~> 3.7'
+pod 'Block-KVO'
+pod 'Appirater'
+pod 'MXGoogleAnalytics'
+pod 'Lockbox'
 
 end
 
