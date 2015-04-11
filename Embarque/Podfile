@@ -1,0 +1,16 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Embarque' do
+
+pod 'Parse', '~> 1.7'
+pod 'SDWebImage', '~> 3.7'
+
+end
+
+target 'EmbarqueTests' do
+
+end
+

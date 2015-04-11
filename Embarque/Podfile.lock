@@ -1,0 +1,18 @@
+PODS:
+  - Bolts (1.1.4)
+  - Parse (1.7.1):
+    - Bolts (~> 1.1)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.7.2)
+
+DEPENDENCIES:
+  - Parse (~> 1.7)
+  - SDWebImage (~> 3.7)
+
+SPEC CHECKSUMS:
+  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  Parse: fa8ec29de6d82035635986c11946299fb1b38316
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+
+COCOAPODS: 0.34.4
