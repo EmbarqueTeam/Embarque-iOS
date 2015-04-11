@@ -3,7 +3,7 @@ PODS:
   - Parse (1.7.1):
     - Bolts (~> 1.1)
   - SDWebImage (3.7.2):
-    - SDWebImage/Core
+    - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
@@ -15,4 +15,4 @@ SPEC CHECKSUMS:
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0

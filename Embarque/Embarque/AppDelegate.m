@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import <Parse/Parse.h>
 #import "EMDataService.h"
 #import "EMAirport.h"
+
+#define KEY_PARSE_APPLICATION_ID_DESENV @"KEnFNcnLArxlllOus00LNLjM6KosLi11tTJn7Aes"
+#define KEY_PARSE_CLIENT_KEY_DESENV     @"ZefV9QEgxnAnsHS8im6sg0R49evcyYOKVTWWsFDb"
+
 @interface AppDelegate ()
 
 @end
@@ -17,12 +20,12 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     [EMAirport registerSubclass];
     
-    [Parse setApplicationId:@"KEnFNcnLArxlllOus00LNLjM6KosLi11tTJn7Aes"
-                  clientKey:@"ZefV9QEgxnAnsHS8im6sg0R49evcyYOKVTWWsFDb"];
-    
+    [Parse setApplicationId:KEY_PARSE_APPLICATION_ID_DESENV
+                  clientKey:KEY_PARSE_CLIENT_KEY_DESENV];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
