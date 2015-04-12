@@ -7,6 +7,7 @@
 //
 
 #import "EMAirport.h"
+#import "NSString+MXAdditions.h"
 
 @implementation EMAirport
 
@@ -43,10 +44,18 @@
 
 - (NSString *)getRateAverageString
 {
+    NSString *result = nil;
+    
     if (self.rateAverage) {
-        return self.rateAverage.stringValue;
+        result = self.rateAverage.stringValue;
     }else{
         return @"-";
+    }
+    
+    if ([result contains:@"."]) {
+        return result;
+    }else{
+        return [NSString stringWithFormat:@"%@.0",result];
     }
 }
 @end

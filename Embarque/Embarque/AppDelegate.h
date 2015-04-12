@@ -21,5 +21,4 @@
 //Push
 //Google Analytics
 //Custom Slider
-//Nunca retornar zero
 

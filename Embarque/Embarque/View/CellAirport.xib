@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALGADO FILHO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-RE-kcx">
-                        <rect key="frame" x="15" y="0.0" width="227" height="100"/>
+                        <rect key="frame" x="15" y="0.0" width="239" height="100"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -29,16 +29,16 @@
                         <size key="shadowOffset" width="1" height="1"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="57" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-TP-ip0">
-                        <rect key="frame" x="257" y="26" width="48" height="48"/>
+                        <rect key="frame" x="269" y="32" width="36" height="36"/>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.61176470589999998" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="48" id="54S-FC-8m9"/>
-                            <constraint firstAttribute="height" constant="48" id="sCm-af-fpM"/>
+                            <constraint firstAttribute="width" constant="36" id="54S-FC-8m9"/>
+                            <constraint firstAttribute="height" constant="36" id="sCm-af-fpM"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
-                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <size key="shadowOffset" width="1" height="1"/>
                     </label>
                 </subviews>
