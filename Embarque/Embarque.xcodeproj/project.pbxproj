@@ -32,6 +32,7 @@
 		BAEA55581AD9EBA000D8054F /* EMCellSend.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA55571AD9EBA000D8054F /* EMCellSend.m */; };
 		BAEA555B1ADA049900D8054F /* EMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA555A1ADA049900D8054F /* EMSessionManager.m */; };
 		BAEA555E1ADA0AC600D8054F /* EMFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA555D1ADA0AC600D8054F /* EMFeedback.m */; };
+		BAEA55611ADA3C7000D8054F /* EMFinalFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA55601ADA3C7000D8054F /* EMFinalFeedbackViewController.m */; };
 		BAFE54521AD979840095706C /* EMAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE54511AD979840095706C /* EMAirport.m */; };
 		BAFE54561AD97B380095706C /* EMDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE54551AD97B380095706C /* EMDataService.m */; };
 		BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE545B1AD990850095706C /* EMCellAirport.m */; };
@@ -96,6 +97,8 @@
 		BAEA555A1ADA049900D8054F /* EMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMSessionManager.m; path = Service/EMSessionManager.m; sourceTree = "<group>"; };
 		BAEA555C1ADA0AC600D8054F /* EMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMFeedback.h; path = Model/EMFeedback.h; sourceTree = "<group>"; };
 		BAEA555D1ADA0AC600D8054F /* EMFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMFeedback.m; path = Model/EMFeedback.m; sourceTree = "<group>"; };
+		BAEA555F1ADA3C7000D8054F /* EMFinalFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMFinalFeedbackViewController.h; path = Controller/EMFinalFeedbackViewController.h; sourceTree = "<group>"; };
+		BAEA55601ADA3C7000D8054F /* EMFinalFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMFinalFeedbackViewController.m; path = Controller/EMFinalFeedbackViewController.m; sourceTree = "<group>"; };
 		BAFE54501AD979840095706C /* EMAirport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAirport.h; path = Model/EMAirport.h; sourceTree = "<group>"; };
 		BAFE54511AD979840095706C /* EMAirport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAirport.m; path = Model/EMAirport.m; sourceTree = "<group>"; };
 		BAFE54541AD97B380095706C /* EMDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMDataService.h; path = Service/EMDataService.h; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				A789D01E1AD9D57D00F9638E /* EMFeedViewController.m */,
 				BAEA55441AD9C42800D8054F /* EMFeedbackViewController.h */,
 				BAEA55451AD9C42800D8054F /* EMFeedbackViewController.m */,
+				BAEA555F1ADA3C7000D8054F /* EMFinalFeedbackViewController.h */,
+				BAEA55601ADA3C7000D8054F /* EMFinalFeedbackViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				BAEA554C1AD9CFA700D8054F /* EMCellFeedback.m in Sources */,
 				BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */,
 				BAEA55461AD9C42800D8054F /* EMFeedbackViewController.m in Sources */,
+				BAEA55611ADA3C7000D8054F /* EMFinalFeedbackViewController.m in Sources */,
 				BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */,
 				A789D0391ADA220C00F9638E /* NSNumber+MXAdditions.m in Sources */,
 				A789D03B1ADA220C00F9638E /* UIView+MXAdditions.m in Sources */,
