@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Cleber Henriques. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "EMBaseViewController.h"
 
-@interface EMFeedbackViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface EMFeedbackViewController : EMBaseViewController
 
 @end

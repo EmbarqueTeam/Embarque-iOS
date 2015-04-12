@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Cleber Henriques. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "EMBaseViewController.h"
 
-@interface EMDetailViewController : UIViewController
+@interface EMDetailViewController : EMBaseViewController
 
 @end

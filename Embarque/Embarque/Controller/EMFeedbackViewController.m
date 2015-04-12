@@ -12,7 +12,7 @@
 #import "EMCellFeedback.h"
 #import "EMSessionManager.h"
 #import "EMFeedback.h"
-@interface EMFeedbackViewController () <EMCellSendDelegate>
+@interface EMFeedbackViewController () <EMCellSendDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *arrayFeedbacks;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
