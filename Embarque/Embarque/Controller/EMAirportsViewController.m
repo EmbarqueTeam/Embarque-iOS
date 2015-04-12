@@ -14,7 +14,7 @@
 #define CELL_LOADING @"CellLoadingA"
 #define CELL_EMPTY   @"CellEmptyA"
 
-#define SEGUE_FEED   @"FeedSegue"
+#define SEGUE_TABBAR @"segueTabBar"
 
 @interface EMAirportsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -134,7 +134,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:SEGUE_FEED
+    [self performSegueWithIdentifier:SEGUE_TABBAR
                               sender:nil];
 }
 
