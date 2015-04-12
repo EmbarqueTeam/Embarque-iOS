@@ -25,7 +25,12 @@
 {
     EMFeedbackItem *item = [EMFeedbackItem newFeedbackItemWithType:type];
     
-    item.rating = rating;
+    if (rating) {
+        item.rating = rating;
+    }else{
+        item.rating = @0;
+    }
+    
     
     return item;
 }

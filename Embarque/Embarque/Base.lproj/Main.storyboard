@@ -80,7 +80,7 @@
         <!--Detail View Controller-->
         <scene sceneID="p1Z-cf-aAv">
             <objects>
-                <viewController id="bC8-8S-0gm" customClass="EMDetailViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bC8-8S-0gm" customClass="EMDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vU0-XV-2Rf"/>
                         <viewControllerLayoutGuide type="bottom" id="n6w-kS-vZr"/>
@@ -89,14 +89,14 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-Wr-vMB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-Wr-vMB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFeedback" rowHeight="90" id="4ou-1u-gwe" customClass="EMCellFeedback">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFeedback" rowHeight="90" id="4ou-1u-gwe" customClass="EMCellFeedback">
                                         <rect key="frame" x="10" y="10" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ou-1u-gwe" id="idW-ak-wv2">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="4ou-1u-gwe" id="idW-ak-wv2">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-mt-iEF">
@@ -129,7 +129,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="4Fl-8d-3pW"/>
                                                     </constraints>
                                                 </imageView>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-a1-JRb">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-3" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-a1-JRb">
                                                     <rect key="frame" x="115" y="44" width="161" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="xHK-sY-aqC"/>
@@ -154,6 +154,7 @@
                                         <color key="backgroundColor" red="0.91764705879999997" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="image" destination="ceP-mt-iEF" id="0wG-21-7xw"/>
+                                            <outlet property="slider" destination="Cjp-a1-JRb" id="bfH-we-Rqa"/>
                                             <outlet property="title" destination="hSv-06-07V" id="dRT-pI-jvI"/>
                                         </connections>
                                     </tableViewCell>
@@ -213,10 +214,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Dh-Wr-vMB" firstAttribute="top" secondItem="vU0-XV-2Rf" secondAttribute="bottom" id="E3V-ek-tHL"/>
-                            <constraint firstAttribute="trailing" secondItem="6Dh-Wr-vMB" secondAttribute="trailing" id="Z2B-na-n8g"/>
-                            <constraint firstAttribute="bottom" secondItem="6Dh-Wr-vMB" secondAttribute="bottom" id="e7l-0k-UlK"/>
-                            <constraint firstItem="6Dh-Wr-vMB" firstAttribute="leading" secondItem="NER-lg-o5W" secondAttribute="leading" id="xDs-ww-7L3"/>
+                            <constraint firstItem="6Dh-Wr-vMB" firstAttribute="leading" secondItem="NER-lg-o5W" secondAttribute="leading" id="IbI-BZ-riA"/>
+                            <constraint firstItem="6Dh-Wr-vMB" firstAttribute="top" secondItem="vU0-XV-2Rf" secondAttribute="bottom" id="JI5-x8-LOY"/>
+                            <constraint firstAttribute="trailing" secondItem="6Dh-Wr-vMB" secondAttribute="trailing" id="K4E-gm-2zf"/>
+                            <constraint firstItem="n6w-kS-vZr" firstAttribute="top" secondItem="6Dh-Wr-vMB" secondAttribute="bottom" id="aVs-2c-AwG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fea-Ec-33f">

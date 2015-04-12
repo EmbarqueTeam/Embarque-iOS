@@ -28,9 +28,16 @@
 -(void)configureWithObject:(id)object target:(id)target indexPath:(NSIndexPath *)indexPath
 {
     if (object && [object isKindOfClass:[EMFeedbackItem class]]) {
-        [self.image setImage:[UIImage imageNamed:[(EMFeedbackItem *)object imageName]]];
-        self.title.text = [(EMFeedbackItem *)object title];
-        self.type = [(EMFeedbackItem *)object type];
+        
+        EMFeedbackItem *feedback = object;
+        
+        [self.image setImage:[UIImage imageNamed:[feedback imageName]]];
+        self.title.text = [feedback title];
+        self.type = [feedback type];
+        
+        if (feedback.rating) {
+            [self.slider setValue:feedback.rating.floatValue animated:YES];
+        }
     }
 }
 

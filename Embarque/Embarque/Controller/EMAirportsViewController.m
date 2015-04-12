@@ -9,6 +9,8 @@
 #import "EMAirportsViewController.h"
 #import "EMDataService.h"
 #import "UIScreen+MXAdditions.h"
+#import "EMAirport.h"
+#import "EMSessionManager.h"
 
 #define CELL_AIRPORT @"CellAirport"
 #define CELL_LOADING @"CellLoadingA"
@@ -136,6 +138,9 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    EMAirport *airport = self.arrayDataSource[indexPath.row];
+    [[EMSessionManager sharedInstance] setSelectedAirport:airport];
+    
     [self performSegueWithIdentifier:SEGUE_TABBAR
                               sender:nil];
 }
