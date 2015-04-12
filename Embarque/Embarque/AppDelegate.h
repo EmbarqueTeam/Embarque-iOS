@@ -19,10 +19,7 @@
 //Default ACL
 //User Anonimous
 //Cloud Code
-//Push
-//Google Analytics
 //Custom Slider
-
 //Rate sem sombra
 //Slide tirar rastro
 //tabBar com background
