@@ -35,6 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Actions
+- (IBAction)barButtonPlusTouched:(id)sender {
+}
+
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
