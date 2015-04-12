@@ -21,7 +21,5 @@
 //Push
 //Google Analytics
 //Custom Slider
-//Pull To refresh no histórico
-//Feedback isEmpty e Loading no Histórico
-//Setar o Titulo da TabBar com nome dos Aeroporto
+//Nunca retornar zero
 

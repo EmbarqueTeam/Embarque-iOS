@@ -24,11 +24,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="QdD-Wn-p2t" secondAttribute="centerY" id="hOt-rB-ILR"/>
                     <constraint firstAttribute="centerX" secondItem="QdD-Wn-p2t" secondAttribute="centerX" id="ubn-34-sd0"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="221" y="240"/>
         </tableViewCell>
     </objects>

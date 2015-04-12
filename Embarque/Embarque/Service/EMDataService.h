@@ -12,6 +12,6 @@
 @interface EMDataService : NSObject
 
 + (void)getAllAirportsWithCache:(BOOL)cached block:(PFArrayResultBlock)block;
-+ (void)getFeedbacksBySelectedAirportWithCache:(BOOL)cached block:(PFArrayResultBlock)block;
++ (void)getFeedbacksBySelectedAirportWithBlock:(PFArrayResultBlock)block;
 
 @end

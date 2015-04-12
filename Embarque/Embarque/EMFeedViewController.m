@@ -8,9 +8,12 @@
 
 #import "EMFeedViewController.h"
 #import "EMDataService.h"
+#import "EMAirport.h"
+#import "EMSessionManager.h"
 
 #define CELL_LOADING @"CellLoadingB"
 #define CELL_EMPTY   @"CellEmptyB"
+#define CELL_HISTORY @"CellHistoric"
 
 @interface EMFeedViewController ()
 
@@ -19,6 +22,7 @@
 @property (assign, nonatomic) BOOL isLoading;
 @property (assign, nonatomic) BOOL isEmpty;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) EMAirport *airport;
 
 @end
 
@@ -37,7 +41,9 @@
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonPlusTouched:)];
     [self.tabBarController.navigationItem setRightBarButtonItem:barButton];
     
-    [self loadFeedbacksWithCache:YES];
+    [self loadFeedbacks];
+    
+    self.tabBarController.navigationItem.title = self.airport.name;
 }
 
 #pragma mark - Actions
@@ -69,16 +75,15 @@
 
 - (void)startRefresh
 {
-    [self loadFeedbacksWithCache:NO];
+    [self loadFeedbacks];
 }
 
-- (void)loadFeedbacksWithCache:(BOOL)cached
+- (void)loadFeedbacks
 {
     self.isLoading = TRUE;
     
     
-    [EMDataService getFeedbacksBySelectedAirportWithCache:cached
-                                                    block:^(NSArray *objects, NSError *error) {
+    [EMDataService getFeedbacksBySelectedAirportWithBlock:^(NSArray *objects, NSError *error) {
                                                         if (error) {
                                                             if (DEBUG) {
                                                                 NSLog(@"%@", error.localizedDescription);
@@ -104,11 +109,6 @@
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.arrayDataSource.count;
@@ -116,9 +116,21 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellHistoric" forIndexPath:indexPath];
+    NSString *identifier = nil;
+
+    if (self.isLoading) {
+        identifier = CELL_LOADING;
+    }else if (self.isEmpty){
+        identifier = CELL_EMPTY;
+    }else{
+        identifier = CELL_HISTORY;
+    }
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
+                                                            forIndexPath:indexPath];
+
     id objeto = [self.arrayDataSource objectAtIndex:indexPath.row];
+    
     
     SEL selector = NSSelectorFromString(@"configureWithObject:target:indexPath:");
     IMP imp = [cell methodForSelector:selector];
@@ -128,5 +140,20 @@
     }
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 133.0f;
+}
+
+#pragma mark - Lazy loading
+- (EMAirport *)airport
+{
+    if (!_airport) {
+        _airport = [[EMSessionManager sharedInstance] selectedAirport];
+    }
+    
+    return _airport;
 }
 @end

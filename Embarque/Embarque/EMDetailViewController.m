@@ -32,6 +32,8 @@
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonPlusTouched:)];
     [self.tabBarController.navigationItem setRightBarButtonItem:barButton];
+    
+    self.tabBarController.navigationItem.title = self.airport.name;
 }
 
 - (void)didReceiveMemoryWarning {

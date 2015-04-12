@@ -27,17 +27,13 @@
     [query findObjectsInBackgroundWithBlock:block];
 }
 
-+ (void)getFeedbacksBySelectedAirportWithCache:(BOOL)cached block:(PFArrayResultBlock)block
++ (void)getFeedbacksBySelectedAirportWithBlock:(PFArrayResultBlock)block
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Feedback"];
     [query whereKey:@"airport" equalTo:[[EMSessionManager sharedInstance] selectedAirport]];
-    [query orderByDescending:@"updatedAt"];
-    if (cached) {
-        [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
-    }else{
-        [query setCachePolicy:kPFCachePolicyNetworkOnly];
-    }
+    [query orderByDescending:@"createdAt"];
     
+    [query setCachePolicy:kPFCachePolicyNetworkOnly];
     
     [query findObjectsInBackgroundWithBlock:block];
 }
