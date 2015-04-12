@@ -29,7 +29,9 @@
 
 - (IBAction)btnSendTouched:(id)sender {
     [[[EMSessionManager sharedInstance] feedbackToCreate] setCompany:self.textCompany.text];
-    [[[EMSessionManager sharedInstance] feedbackToCreate] setCompany:self.textFlight.text];
+    [[[EMSessionManager sharedInstance] feedbackToCreate] setFlight:self.textFlight.text];
+    
+    [[[EMSessionManager sharedInstance] feedbackToCreate] saveEventually];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

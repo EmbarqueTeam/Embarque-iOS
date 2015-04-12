@@ -54,7 +54,7 @@
             [[[EMSessionManager sharedInstance] feedbackToCreate] setSecurity:@(sender.value)];
             break;
         case FeedbackTypeInformation:
-            [[[EMSessionManager sharedInstance] feedbackToCreate] setWifi:@(sender.value)];
+            [[[EMSessionManager sharedInstance] feedbackToCreate] setInformation:@(sender.value)];
             break;
         case FeedbackTypeButtonEnviar:
             break;
