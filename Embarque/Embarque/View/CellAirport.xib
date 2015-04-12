@@ -7,23 +7,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zg1-ym-c15" customClass="EMCellAirport">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellAirport" id="zg1-ym-c15" customClass="EMCellAirport">
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-or-WJy">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-or-WJy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw3-6J-wZi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="wYI-LP-DjL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALGADO FILHO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-RE-kcx">
                         <rect key="frame" x="15" y="0.0" width="245" height="100"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,6 +37,7 @@
             </view>
             <constraints>
                 <constraint firstItem="oRw-RE-kcx" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="1Zh-d2-6YI"/>
+                <constraint firstAttribute="trailing" secondItem="wYI-LP-DjL" secondAttribute="trailing" id="5wn-bS-alj"/>
                 <constraint firstAttribute="bottom" secondItem="uL0-or-WJy" secondAttribute="bottom" id="FPg-pD-OxM"/>
                 <constraint firstItem="lw3-6J-wZi" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="Jv0-h8-cTb"/>
                 <constraint firstAttribute="trailing" secondItem="lw3-6J-wZi" secondAttribute="trailing" id="Nfe-ph-duL"/>
@@ -41,6 +45,9 @@
                 <constraint firstItem="oRw-RE-kcx" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" constant="15" id="UKe-YY-B3A"/>
                 <constraint firstAttribute="bottom" secondItem="lw3-6J-wZi" secondAttribute="bottom" id="WHG-9o-V4f"/>
                 <constraint firstAttribute="trailing" secondItem="uL0-or-WJy" secondAttribute="trailing" id="czw-5f-TTS"/>
+                <constraint firstAttribute="bottom" secondItem="wYI-LP-DjL" secondAttribute="bottom" id="f4E-PY-EBs"/>
+                <constraint firstItem="wYI-LP-DjL" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="f6P-xQ-jRE"/>
+                <constraint firstItem="wYI-LP-DjL" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="fU1-YP-KaB"/>
                 <constraint firstItem="lw3-6J-wZi" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="ffU-rC-jqU"/>
                 <constraint firstItem="uL0-or-WJy" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="hkX-5R-FgI"/>
                 <constraint firstAttribute="trailing" secondItem="oRw-RE-kcx" secondAttribute="trailing" constant="60" id="kXO-H2-P7U"/>
@@ -54,4 +61,7 @@
             <point key="canvasLocation" x="229" y="398"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="shadow" width="100" height="35"/>
+    </resources>
 </document>

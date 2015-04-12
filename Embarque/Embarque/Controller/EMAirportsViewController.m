@@ -56,12 +56,12 @@
 
 - (void)startRefresh
 {
-    [self loadAirportsWithCache:YES];
+    [self loadAirportsWithCache:NO];
 }
 
 - (void)loadAirports
 {
-    [self loadAirportsWithCache:NO];
+    [self loadAirportsWithCache:YES];
 }
 
 - (void)loadAirportsWithCache:(BOOL)cached

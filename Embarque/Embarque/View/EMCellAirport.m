@@ -14,8 +14,31 @@
 -(void)configureWithObject:(id)object target:(id)target indexPath:(NSIndexPath *)indexPath
 {
     if (object && [object isKindOfClass:[EMAirport class]]) {
-        self.name.text = [[(EMAirport *)object name] uppercaseString];
-        [self.cover sd_setImageWithURL:[(EMAirport *) object coverURL]];
+        EMAirport *airport = object;
+        
+        NSDictionary *attributesTitle = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       [UIFont fontWithName:@"HelveticaNeue-Light" size:26], NSFontAttributeName,
+                                       [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+        NSDictionary *attributesSubtitle = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       [UIFont fontWithName:@"HelveticaNeue-Light" size:20], NSFontAttributeName,
+                                       [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+        
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]
+                                                       initWithString:[airport name]
+                                                       attributes:attributesTitle];
+        
+        [attributedString appendAttributedString:[[NSMutableAttributedString alloc]
+                                                  initWithString:@"\n"]];
+        
+        [attributedString appendAttributedString:[[NSMutableAttributedString alloc]
+                                                  initWithString:[airport city]
+                                                  attributes:attributesSubtitle]];
+        
+        [self.name setAttributedText:attributedString];
+        
+        if (airport.coverURL) {
+            [self.cover sd_setImageWithURL:[(EMAirport *) object coverURL]];
+        }
     }
 }
 

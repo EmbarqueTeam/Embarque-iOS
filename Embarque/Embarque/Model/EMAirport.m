@@ -27,6 +27,10 @@
 
 -(NSURL *)coverURL
 {
-    return [NSURL URLWithString:self.cover.url];
+    if (self.cover) {
+        return [NSURL URLWithString:self.cover.url];
+    }
+    
+    return nil;
 }
 @end
