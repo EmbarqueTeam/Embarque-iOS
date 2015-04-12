@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSMutableArray *arrayDataSource;
 @property (assign, nonatomic) BOOL isLoading;
 @property (assign, nonatomic) BOOL isEmpty;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -32,11 +33,8 @@
     self.arrayDataSource = [NSMutableArray new];
     [self.arrayDataSource addObject:[NSNull null]];
     
-    [self registerCellNib];
-    //[self loadAirports];
-    
-    self.isLoading = true;
-    [self performSelector:@selector(loadAirports) withObject:nil afterDelay:3.0f];
+    [self configureCollection];
+    [self loadAirports];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,18 +42,33 @@
 }
 
 #pragma mark - Methods
-- (void)registerCellNib
+- (void)configureCollection
 {
     [self.collectionView registerNib:[UINib nibWithNibName:CELL_AIRPORT bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_AIRPORT];
     [self.collectionView registerNib:[UINib nibWithNibName:CELL_LOADING bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_LOADING];
     [self.collectionView registerNib:[UINib nibWithNibName:CELL_EMPTY bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_EMPTY];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(startRefresh)
+             forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
+}
+
+- (void)startRefresh
+{
+    [self loadAirportsWithCache:YES];
 }
 
 - (void)loadAirports
 {
+    [self loadAirportsWithCache:NO];
+}
+
+- (void)loadAirportsWithCache:(BOOL)cached
+{
     self.isLoading = TRUE;
     
-    [EMDataService getAllAirportsWithBlock:^(NSArray *objects, NSError *error) {
+    [EMDataService getAllAirportsWithCache:cached block:^(NSArray *objects, NSError *error) {
         if (error) {
             if (DEBUG) {
                 NSLog(@"%@", error.localizedDescription);
@@ -72,9 +85,11 @@
             self.isEmpty = TRUE;
         }
 
+        
         [self.collectionView reloadData];
         
         self.isLoading = FALSE;
+        [self.refreshControl endRefreshing];
     }];
 }
 

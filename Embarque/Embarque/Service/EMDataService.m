@@ -12,31 +12,18 @@
 @implementation EMDataService
 
 
-+ (void)getAllAirportsWithBlock:(PFArrayResultBlock)block
++ (void)getAllAirportsWithCache:(BOOL)cached block:(PFArrayResultBlock)block
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Airport"];
     
-    [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
+    if (cached) {
+        [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
+    }else{
+        [query setCachePolicy:kPFCachePolicyNetworkOnly];
+    }
+    
     
     [query findObjectsInBackgroundWithBlock:block];
-}
-
-+ (void)old_getAllAirportsWithBlock:(void (^)(NSArray *airports, bool success))block
-{
-    PFQuery *query = [PFQuery queryWithClassName:@"Airport"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            block(objects, true);
-        } else {
-            // Log details of the failure
-            if (DEBUG) {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-            }
-            
-            block(nil, false);
-        }
-    }];
 }
 
 @end
