@@ -54,6 +54,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Embarque-UIButton-ANDYHighlighted.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Embarque-UIColor-ColorWithHexAndAlpha.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Embarque.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,57 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1EA7791DF12FA612549DA55A</key>
+		<key>026A6A3D966AC79631FEC87A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>311629D3C19D9CCFB62BB3B2</key>
+		<key>2BF02C790C8B452A4A7E6B3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>49BC95F1AF5CBA59FB035EFF</key>
+		<key>4A9B833576B7774FF3E2D331</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54C44CF6A9D6FE9D6FEEB926</key>
+		<key>5A81CBFE4B6E77236D318A6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C97D09D32DF6C487D5F022A</key>
+		<key>5BFDBD2A16506324935EA450</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>710E06F5744885DA4F347D86</key>
+		<key>5FB9C0EEE58C4EA960072FBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9523221AB15146FDA412E9BE</key>
+		<key>64441B94B032BE2B761F07D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9E13289BB18C13CF401DD2C</key>
+		<key>79F562C16D01C1644F42D4E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9E2DB0A7D7CA9C3AC2F1B70</key>
+		<key>9E0DF5C0AD0EB555ED84EEC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D73E81D1D9C0E3E9EE6566A5</key>
+		<key>A0A88193BC52012F87530B63</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E697E85008C70DD5893A7E19</key>
+		<key>B66EA07B5DDBD5271E6A4EBB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCB2A957BCFB57E347BBE09A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F93CB10542C772E05E6A4DB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
