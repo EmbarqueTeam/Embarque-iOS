@@ -41,6 +41,9 @@
 
 #pragma mark - Actions
 - (IBAction)barButtonPlusTouched:(id)sender {
+    UIStoryboard *feedbackStoryboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:[NSBundle mainBundle]];
+    UINavigationController *navFeedback = [feedbackStoryboard instantiateViewControllerWithIdentifier:@"FeedbackNavigationController"];
+    [self presentViewController:navFeedback animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate

@@ -351,7 +351,7 @@
 				TargetAttributes = {
 					BA6B591B1AD9507F00FC78F1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = U4D7MD5WUL;
+						DevelopmentTeam = CBSFV8387P;
 					};
 					BA6B59341AD9507F00FC78F1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -618,8 +618,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: CLEBER NETO (B46694DD45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: CLEBER NETO (B46694DD45)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -640,8 +640,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: CLEBER NETO (B46694DD45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: CLEBER NETO (ZKDWGXVK5T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
