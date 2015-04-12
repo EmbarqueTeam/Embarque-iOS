@@ -9,10 +9,16 @@
 #import "EMFeedViewController.h"
 #import "EMDataService.h"
 
+#define CELL_LOADING @"CellLoadingB"
+#define CELL_EMPTY   @"CellEmptyB"
+
 @interface EMFeedViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *arrayDataSource;
+@property (assign, nonatomic) BOOL isLoading;
+@property (assign, nonatomic) BOOL isEmpty;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -22,10 +28,11 @@
 {
     [super viewDidLoad];
     
-    [self.tableView setDataSource:self];
-    [self.tableView setDelegate:self];
     
     self.arrayDataSource = [[NSMutableArray alloc] init];
+    [self.arrayDataSource addObject:[NSNull null]];
+    
+    [self configureTable];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonPlusTouched:)];
     [self.tabBarController.navigationItem setRightBarButtonItem:barButton];
@@ -42,8 +49,34 @@
 }
 
 #pragma mark - Methods
+- (void)configureTable
+{
+    [self.tableView setDataSource:self];
+    [self.tableView setDelegate:self];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:CELL_LOADING bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:CELL_LOADING];
+    [self.tableView registerNib:[UINib nibWithNibName:CELL_EMPTY bundle:[NSBundle mainBundle]]
+         forCellReuseIdentifier:CELL_EMPTY];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(startRefresh)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+}
+
+- (void)startRefresh
+{
+    [self loadFeedbacksWithCache:NO];
+}
+
 - (void)loadFeedbacksWithCache:(BOOL)cached
 {
+    self.isLoading = TRUE;
+    
+    
     [EMDataService getFeedbacksBySelectedAirportWithCache:cached
                                                     block:^(NSArray *objects, NSError *error) {
                                                         if (error) {
@@ -54,9 +87,19 @@
                                                         
                                                         [self.arrayDataSource removeAllObjects];
                                                         
-                                                        [self.arrayDataSource addObjectsFromArray:objects];
+                                                        if (objects && objects.count > 1) {
+                                                            [self.arrayDataSource addObjectsFromArray:objects];
+                                                            self.isEmpty = FALSE;
+                                                        }else{
+                                                            [self.arrayDataSource addObject:[NSNull null]];
+                                                            self.isEmpty = TRUE;
+                                                        }
+                                                        
                                                         
                                                         [self.tableView reloadData];
+                                                        
+                                                        self.isLoading = FALSE;
+                                                        [self.refreshControl endRefreshing];
                                                     }];
 }
 
