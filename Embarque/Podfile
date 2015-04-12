@@ -14,7 +14,7 @@ pod 'Lockbox'
 pod 'UIColor-ColorWithHexAndAlpha', '~> 1.2'
 pod 'UIButton-ANDYHighlighted'
 pod 'DateTools'
-
+pod 'Toast'
 end
 
 target 'EmbarqueTests' do

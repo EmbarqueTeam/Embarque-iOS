@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACDE7954920D976856688D4D"
+               BlueprintIdentifier = "8F1F8A54E180C0AAD18A9B8D"
                BuildableName = "libPods-Embarque-Lockbox.a"
                BlueprintName = "Pods-Embarque-Lockbox"
                ReferencedContainer = "container:Pods.xcodeproj">

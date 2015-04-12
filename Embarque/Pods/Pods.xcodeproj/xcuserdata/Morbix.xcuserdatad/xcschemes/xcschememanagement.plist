@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Embarque-Toast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Embarque-UIButton-ANDYHighlighted.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,72 +82,77 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>32908B65095D58F67A32BAF6</key>
+		<key>45B807CAEBA6862C6F345763</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A5434B90A53C1A4F4BCEEF0</key>
+		<key>47ADD213DD48977E36F3F8E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E16CF44384C9C15DCEADD89</key>
+		<key>602386C8FE590F2B8B64F2E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60A1A1C49FD003882CF67E45</key>
+		<key>60B4617E949F460B286D7585</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7DD36B3F0E3463ADD552C2D9</key>
+		<key>6C17EB77E7531A7DC32D98C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82BFF9A88750E0836DE4EF1C</key>
+		<key>77AE9CE8425D106B0B606BB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACDE7954920D976856688D4D</key>
+		<key>8F1F8A54E180C0AAD18A9B8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFAED1E6C0675ECAAC61A116</key>
+		<key>9B923FE7E7C66024BEBF4447</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5632AF08EDD608F0F6EFBEE</key>
+		<key>9C420415072A14320059E91C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5901B894940E6B9A335364C</key>
+		<key>9F473FBA1C7335E6EA7153C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CEFAB77A7E2E9E3B33BFF6D1</key>
+		<key>AEBF5E5B79F2F93D5EE0A232</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF0CB0FB00380BC4E6E095EE</key>
+		<key>DB5E5BCC73412EE6B9C6644D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E068B9D8DAAEF9686DAB9DBA</key>
+		<key>DD97DA18BE10CA2038C0D73B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E852152B5C5C5B419F493C34</key>
+		<key>E1D27A84E9FEA8291BCD5D7B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4392DD83C0D4CDE728C7D6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

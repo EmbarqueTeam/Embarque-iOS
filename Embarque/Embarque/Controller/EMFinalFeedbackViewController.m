@@ -34,7 +34,11 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)btnSendTouched:(id)sender {
+#pragma mark - Actions
+- (IBAction)btnSendTouched:(id)sender
+{
+    [self showToast];
+    
     [[[EMSessionManager sharedInstance] feedbackToCreate] setCompany:self.textCompany.text];
     [[[EMSessionManager sharedInstance] feedbackToCreate] setFlight:self.textFlight.text];
     
@@ -45,10 +49,19 @@
     [MXGoogleAnalytics ga_trackEventWith:@"Feedback Final" action:@"Sent"];
 }
 
-- (IBAction)btnSkipTouched:(id)sender {
+- (IBAction)btnSkipTouched:(id)sender
+{
+    [self showToast];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
     [MXGoogleAnalytics ga_trackEventWith:@"Feedback Final" action:@"Cancelled"];
+}
+
+#pragma mark - Methods
+-(void)showToast
+{
+    [self.view makeToast:@"Feedback enviado com sucesso!"];
 }
 
 @end

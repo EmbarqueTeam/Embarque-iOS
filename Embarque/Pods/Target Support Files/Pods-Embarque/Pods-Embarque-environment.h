@@ -72,6 +72,12 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 
+// Toast
+#define COCOAPODS_POD_AVAILABLE_Toast
+#define COCOAPODS_VERSION_MAJOR_Toast 2
+#define COCOAPODS_VERSION_MINOR_Toast 4
+#define COCOAPODS_VERSION_PATCH_Toast 0
+
 // UIButton-ANDYHighlighted
 #define COCOAPODS_POD_AVAILABLE_UIButton_ANDYHighlighted
 #define COCOAPODS_VERSION_MAJOR_UIButton_ANDYHighlighted 0

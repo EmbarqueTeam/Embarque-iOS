@@ -8,6 +8,7 @@
 
 #import "EMBaseViewController.h"
 #import <MXGoogleAnalytics/MXGoogleAnalytics.h>
+#import <Toast/UIView+Toast.h>
 
 @interface EMDetailViewController : EMBaseViewController
 

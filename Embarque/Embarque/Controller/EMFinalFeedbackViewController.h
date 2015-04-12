@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MXGoogleAnalytics/MXGoogleAnalytics.h>
+#import <Toast/UIView+Toast.h>
 
 @interface EMFinalFeedbackViewController : UIViewController
 
