@@ -12,5 +12,6 @@
 @interface EMCellAirport : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *cover;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (strong, nonatomic) IBOutlet UILabel *labelRating;
 
 @end

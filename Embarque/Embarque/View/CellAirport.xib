@@ -21,9 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SALGADO FILHO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-RE-kcx">
-                        <rect key="frame" x="15" y="0.0" width="245" height="100"/>
+                        <rect key="frame" x="15" y="0.0" width="227" height="100"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="57" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-TP-ip0">
+                        <rect key="frame" x="257" y="26" width="48" height="48"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.61176470589999998" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="54S-FC-8m9"/>
+                            <constraint firstAttribute="height" constant="48" id="sCm-af-fpM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <size key="shadowOffset" width="1" height="1"/>
@@ -33,7 +46,9 @@
             </view>
             <constraints>
                 <constraint firstItem="oRw-RE-kcx" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="1Zh-d2-6YI"/>
+                <constraint firstAttribute="trailing" secondItem="fJa-TP-ip0" secondAttribute="trailing" constant="15" id="5o3-fd-QoD"/>
                 <constraint firstAttribute="trailing" secondItem="wYI-LP-DjL" secondAttribute="trailing" id="5wn-bS-alj"/>
+                <constraint firstAttribute="centerY" secondItem="fJa-TP-ip0" secondAttribute="centerY" id="AYi-mV-bYf"/>
                 <constraint firstAttribute="bottom" secondItem="uL0-or-WJy" secondAttribute="bottom" id="FPg-pD-OxM"/>
                 <constraint firstItem="uL0-or-WJy" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="RfH-xs-xUY"/>
                 <constraint firstItem="oRw-RE-kcx" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" constant="15" id="UKe-YY-B3A"/>
@@ -42,12 +57,13 @@
                 <constraint firstItem="wYI-LP-DjL" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="f6P-xQ-jRE"/>
                 <constraint firstItem="wYI-LP-DjL" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="fU1-YP-KaB"/>
                 <constraint firstItem="uL0-or-WJy" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="hkX-5R-FgI"/>
-                <constraint firstAttribute="trailing" secondItem="oRw-RE-kcx" secondAttribute="trailing" constant="60" id="kXO-H2-P7U"/>
+                <constraint firstItem="fJa-TP-ip0" firstAttribute="leading" secondItem="oRw-RE-kcx" secondAttribute="trailing" constant="15" id="jo3-Kb-LCC"/>
                 <constraint firstAttribute="bottom" secondItem="oRw-RE-kcx" secondAttribute="bottom" id="pFv-b8-RLZ"/>
             </constraints>
             <size key="customSize" width="307" height="160"/>
             <connections>
                 <outlet property="cover" destination="uL0-or-WJy" id="Mhu-K5-7uF"/>
+                <outlet property="labelRating" destination="fJa-TP-ip0" id="1gv-JK-UYX"/>
                 <outlet property="name" destination="oRw-RE-kcx" id="469-Xu-ax2"/>
             </connections>
             <point key="canvasLocation" x="229" y="398"/>

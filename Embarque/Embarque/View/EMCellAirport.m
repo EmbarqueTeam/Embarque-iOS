@@ -39,6 +39,10 @@
         if (airport.coverURL) {
             [self.cover sd_setImageWithURL:[(EMAirport *) object coverURL]];
         }
+        
+        self.labelRating.text = [airport getRateAverageString];
+        [self.labelRating.layer setMasksToBounds:YES];
+        [self.labelRating.layer setCornerRadius:10.0f];
     }
 }
 
