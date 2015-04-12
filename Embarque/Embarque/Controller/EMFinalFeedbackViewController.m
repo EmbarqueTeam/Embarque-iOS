@@ -37,31 +37,25 @@
 #pragma mark - Actions
 - (IBAction)btnSendTouched:(id)sender
 {
-    [self showToast];
-    
     [[[EMSessionManager sharedInstance] feedbackToCreate] setCompany:self.textCompany.text];
     [[[EMSessionManager sharedInstance] feedbackToCreate] setFlight:self.textFlight.text];
     
     [[[EMSessionManager sharedInstance] feedbackToCreate] saveEventually];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"io.embarque.show_message" object:nil];
+    }];
     
     [MXGoogleAnalytics ga_trackEventWith:@"Feedback Final" action:@"Sent"];
 }
 
 - (IBAction)btnSkipTouched:(id)sender
 {
-    [self showToast];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"io.embarque.show_message" object:nil];
+    }];
     
     [MXGoogleAnalytics ga_trackEventWith:@"Feedback Final" action:@"Cancelled"];
-}
-
-#pragma mark - Methods
--(void)showToast
-{
-    [self.view makeToast:@"Feedback enviado com sucesso!"];
 }
 
 @end

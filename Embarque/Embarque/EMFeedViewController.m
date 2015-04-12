@@ -44,6 +44,8 @@
     [self loadFeedbacks];
     
     self.tabBarController.navigationItem.title = self.airport.name;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMessage) name:@"io.embarque.show_message" object:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -64,6 +66,11 @@
 }
 
 #pragma mark - Methods
+- (void)showMessage
+{
+    [self.view makeToast:@"Feedback enviado com sucesso!"];
+}
+
 - (void)configureTable
 {
     [self.tableView setDataSource:self];

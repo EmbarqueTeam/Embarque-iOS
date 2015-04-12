@@ -34,6 +34,8 @@
     [self.tabBarController.navigationItem setRightBarButtonItem:barButton];
     
     self.tabBarController.navigationItem.title = self.airport.name;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMessage) name:@"io.embarque.show_message" object:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -56,6 +58,13 @@
     
     [MXGoogleAnalytics ga_trackEventWith:@"Detail" action:@"Plus Selected"];
 }
+
+#pragma mark - Methods
+- (void)showMessage
+{
+    [self.view makeToast:@"Feedback enviado com sucesso!"];
+}
+
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
