@@ -8,6 +8,7 @@
 
 #import "EMAirportsViewController.h"
 #import "EMDataService.h"
+#import "UIScreen+MXAdditions.h"
 
 #define CELL_AIRPORT @"CellAirport"
 #define CELL_LOADING @"CellLoadingA"
@@ -39,6 +40,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.collectionView.collectionViewLayout invalidateLayout];
 }
 
 #pragma mark - Methods
@@ -135,7 +141,14 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (!self.isLoading && !self.isEmpty) {
-        return CGSizeMake(collectionView.bounds.size.width, 100.0f);
+        
+        CGSize size = [[UIScreen mainScreen] mx_contextSize];
+        
+        if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
+            return CGSizeMake(size.width, 100.0f);
+        }else{
+            return CGSizeMake(size.height, 100.0f);
+        }
     }else{
         return CGSizeMake(320.0f, 100.0f);
     }

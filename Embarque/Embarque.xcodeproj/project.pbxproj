@@ -13,6 +13,7 @@
 		A789D0261AD9FA7600F9638E /* CellLoadingA.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0251AD9FA7600F9638E /* CellLoadingA.xib */; };
 		A789D02A1AD9FBCA00F9638E /* EMCellEmptyA.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0281AD9FBCA00F9638E /* EMCellEmptyA.m */; };
 		A789D02B1AD9FBCA00F9638E /* CellEmptyA.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0291AD9FBCA00F9638E /* CellEmptyA.xib */; };
+		A789D02E1ADA14C200F9638E /* UIScreen+MXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D02D1ADA14C200F9638E /* UIScreen+MXAdditions.m */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -48,6 +49,8 @@
 		A789D0271AD9FBCA00F9638E /* EMCellEmptyA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCellEmptyA.h; sourceTree = "<group>"; };
 		A789D0281AD9FBCA00F9638E /* EMCellEmptyA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCellEmptyA.m; sourceTree = "<group>"; };
 		A789D0291AD9FBCA00F9638E /* CellEmptyA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellEmptyA.xib; sourceTree = "<group>"; };
+		A789D02C1ADA14C200F9638E /* UIScreen+MXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+MXAdditions.h"; sourceTree = "<group>"; };
+		A789D02D1ADA14C200F9638E /* UIScreen+MXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+MXAdditions.m"; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,6 +111,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A789D02F1ADA14C600F9638E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A789D02C1ADA14C200F9638E /* UIScreen+MXAdditions.h */,
+				A789D02D1ADA14C200F9638E /* UIScreen+MXAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		BA6B59131AD9507F00FC78F1 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 		BA6B591E1AD9507F00FC78F1 /* Embarque */ = {
 			isa = PBXGroup;
 			children = (
+				A789D02F1ADA14C600F9638E /* Categories */,
 				BAFE545D1AD9928B0095706C /* Controller */,
 				BAFE54591AD98EF70095706C /* View */,
 				BAFE54531AD97AE90095706C /* Service */,
@@ -365,6 +378,7 @@
 				BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */,
 				BA6B59221AD9507F00FC78F1 /* main.m in Sources */,
 				BAFE54561AD97B380095706C /* EMDataService.m in Sources */,
+				A789D02E1ADA14C200F9638E /* UIScreen+MXAdditions.m in Sources */,
 				A789D01F1AD9D57D00F9638E /* EMFeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
