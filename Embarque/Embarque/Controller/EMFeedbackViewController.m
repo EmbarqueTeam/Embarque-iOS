@@ -28,12 +28,19 @@
     [[[EMSessionManager sharedInstance] feedbackToCreate] setAirport:[[EMSessionManager sharedInstance] selectedAirport]];
     
     [self.tableView setBackgroundColor:[UIColor clearColor]];
+    
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancelar" style:UIBarButtonItemStylePlain target:self action:@selector(cancelTouched)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+- (void)cancelTouched
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 #pragma mark - UITableViewDataSource & Delegates
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
