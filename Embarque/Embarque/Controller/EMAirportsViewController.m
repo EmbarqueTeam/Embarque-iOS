@@ -15,7 +15,7 @@
 
 #define SEGUE_FEED   @"FeedSegue"
 
-@interface EMAirportsViewController ()
+@interface EMAirportsViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *arrayDataSource;
@@ -78,7 +78,7 @@
     }];
 }
 
-#pragma mark - UICollectionView DataSource and Delegates
+#pragma mark - UICollectionViewDataSource and UICollectionViewDelegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.arrayDataSource.count;
@@ -115,6 +115,30 @@
 {
     [self performSegueWithIdentifier:SEGUE_FEED
                               sender:nil];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!self.isLoading && !self.isEmpty) {
+        return CGSizeMake(collectionView.bounds.size.width, 100.0f);
+    }else{
+        return CGSizeMake(320.0f, 100.0f);
+    }
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0.0f;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0.0f;
 }
 
 @end

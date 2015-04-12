@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Block-KVO/NSObject+MTKObserving.h>
 
-@interface EMAirportsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface EMAirportsViewController : UIViewController
 
 @end
