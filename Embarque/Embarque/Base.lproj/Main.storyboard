@@ -244,6 +244,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="xHK-sY-aqC"/>
                                                     </constraints>
+                                                    <color key="minimumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </slider>
                                             </subviews>
                                             <constraints>

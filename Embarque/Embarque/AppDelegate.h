@@ -21,7 +21,5 @@
 //User Anonimous
 //Cloud Code
 //Custom Slider
-//Rate sem sombra
-//Slide tirar rastro
 //tabBar com background
 
