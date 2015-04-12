@@ -17,31 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-AG-Js1">
-                                <rect key="frame" x="30" y="208" width="260" height="88"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="u4W-LT-ILl">
-                                        <rect key="frame" x="56" y="33" width="20" height="20"/>
-                                    </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carregando..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="X9j-KP-gFJ">
-                                        <rect key="frame" x="84" y="33" width="120" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="h3l-Hj-AZP"/>
-                                            <constraint firstAttribute="width" constant="120" id="hRK-Fa-vZ8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="X9j-KP-gFJ" secondAttribute="centerY" id="E2j-4A-JPj"/>
-                                    <constraint firstAttribute="height" constant="88" id="Glh-6j-p2n"/>
-                                    <constraint firstAttribute="width" constant="260" id="LcR-Yt-Inf"/>
-                                    <constraint firstAttribute="centerX" secondItem="X9j-KP-gFJ" secondAttribute="centerX" constant="-14" id="f8c-cx-fGD"/>
-                                </constraints>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-A3-qSS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,17 +37,14 @@
                         <constraints>
                             <constraint firstItem="DPf-A3-qSS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E93-eJ-Us3"/>
                             <constraint firstItem="DPf-A3-qSS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EWD-S3-fey"/>
-                            <constraint firstAttribute="centerX" secondItem="gjt-AG-Js1" secondAttribute="centerX" id="IIy-pp-nBZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DPf-A3-qSS" secondAttribute="bottom" id="aRH-mP-a5X"/>
                             <constraint firstAttribute="trailing" secondItem="DPf-A3-qSS" secondAttribute="trailing" id="igX-AZ-GlF"/>
-                            <constraint firstAttribute="centerY" secondItem="gjt-AG-Js1" secondAttribute="centerY" id="urV-gO-Urb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Aeroportos" id="e1z-qp-Rcp"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="DPf-A3-qSS" id="TkA-8V-zdv"/>
-                        <outlet property="viewLoading" destination="gjt-AG-Js1" id="Cz7-yl-tPe"/>
                         <segue destination="VYc-sQ-K04" kind="push" identifier="FeedSegue" id="vIJ-aj-ted"/>
                     </connections>
                 </viewController>

@@ -14,7 +14,7 @@
 -(void)configureWithObject:(id)object target:(id)target indexPath:(NSIndexPath *)indexPath
 {
     if (object && [object isKindOfClass:[EMAirport class]]) {
-        self.name.text = [(EMAirport *)object name];
+        self.name.text = [[(EMAirport *)object name] uppercaseString];
         [self.cover sd_setImageWithURL:[(EMAirport *) object coverURL]];
     }
 }
