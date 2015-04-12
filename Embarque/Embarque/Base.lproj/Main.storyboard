@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="voB-yj-5ow">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="voB-yj-5ow">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Embarque-->
@@ -70,25 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVX-Ay-zaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="742" y="841"/>
-        </scene>
-        <!--Relatar-->
-        <scene sceneID="xr5-9k-k32">
-            <objects>
-                <viewController id="VVa-18-49Z" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="by8-pe-4lu"/>
-                        <viewControllerLayoutGuide type="bottom" id="iQb-kH-oNi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dfm-ZP-CCD">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Relatar" image="tab_pen" id="bDg-am-rz6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PFk-mQ-HvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1085" y="491"/>
         </scene>
         <!--Detalhes-->
         <scene sceneID="p1Z-cf-aAv">
@@ -245,7 +226,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="bC8-8S-0gm" kind="relationship" relationship="viewControllers" id="46y-l9-RFT"/>
-                        <segue destination="VVa-18-49Z" kind="relationship" relationship="viewControllers" id="ZF7-wH-xxu"/>
                         <segue destination="jvM-tb-eUN" kind="relationship" relationship="viewControllers" id="ZqN-TT-WBz"/>
                     </connections>
                 </tabBarController>
@@ -278,7 +258,6 @@
         <image name="ThumbsUp" width="64" height="64"/>
         <image name="tab_badge" width="32" height="32"/>
         <image name="tab_history" width="32" height="32"/>
-        <image name="tab_pen" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
