@@ -23,4 +23,6 @@
 @property (strong, nonatomic) NSNumber *wifi;
 
 -(NSURL *)coverURL;
+- (NSString *)getRateAverageString;
+
 @end

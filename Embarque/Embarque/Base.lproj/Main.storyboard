@@ -159,14 +159,14 @@
                                             <outlet property="title" destination="hSv-06-07V" id="dRT-pI-jvI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="pH5-Vt-AvN">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellRating" rowHeight="120" id="pH5-Vt-AvN" customClass="EMCellRating">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pH5-Vt-AvN" id="w5N-tI-1DV">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avaliação Geral" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="6BM-rv-rih">
-                                                    <rect key="frame" x="47" y="28" width="226" height="21"/>
+                                                    <rect key="frame" x="47" y="37" width="226" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="226" id="Eiq-Ag-Tmz"/>
                                                         <constraint firstAttribute="height" constant="21" id="Kb7-Xx-r5F"/>
@@ -176,35 +176,38 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-C5-4ol">
-                                                    <rect key="frame" x="20" y="15" width="280" height="1"/>
+                                                <view alpha="0.79999999999999982" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-C5-4ol">
+                                                    <rect key="frame" x="40" y="21" width="240" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="5EO-xq-j8v"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="TQ4-4p-QdJ">
-                                                    <rect key="frame" x="47" y="51" width="226" height="32"/>
+                                                    <rect key="frame" x="47" y="60" width="226" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="6fk-bf-jFy"/>
                                                         <constraint firstAttribute="width" constant="226" id="zt1-mW-3Tt"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BHF-C5-4ol" firstAttribute="leading" secondItem="w5N-tI-1DV" secondAttribute="leading" constant="20" id="49H-fK-vJr"/>
+                                                <constraint firstItem="BHF-C5-4ol" firstAttribute="leading" secondItem="w5N-tI-1DV" secondAttribute="leading" constant="40" id="49H-fK-vJr"/>
                                                 <constraint firstItem="TQ4-4p-QdJ" firstAttribute="top" secondItem="6BM-rv-rih" secondAttribute="bottom" constant="2" id="5md-Ic-FLN"/>
-                                                <constraint firstAttribute="trailing" secondItem="BHF-C5-4ol" secondAttribute="trailing" constant="20" id="GVC-yg-igP"/>
-                                                <constraint firstItem="BHF-C5-4ol" firstAttribute="top" secondItem="w5N-tI-1DV" secondAttribute="top" constant="15" id="aUU-9Z-37e"/>
+                                                <constraint firstAttribute="trailing" secondItem="BHF-C5-4ol" secondAttribute="trailing" constant="40" id="GVC-yg-igP"/>
+                                                <constraint firstItem="BHF-C5-4ol" firstAttribute="top" secondItem="w5N-tI-1DV" secondAttribute="top" constant="21" id="aUU-9Z-37e"/>
                                                 <constraint firstAttribute="centerX" secondItem="TQ4-4p-QdJ" secondAttribute="centerX" id="maA-lO-hOs"/>
-                                                <constraint firstItem="6BM-rv-rih" firstAttribute="top" secondItem="BHF-C5-4ol" secondAttribute="bottom" constant="12" id="qC4-JJ-RKb"/>
+                                                <constraint firstItem="6BM-rv-rih" firstAttribute="top" secondItem="BHF-C5-4ol" secondAttribute="bottom" constant="15" id="qC4-JJ-RKb"/>
                                                 <constraint firstAttribute="centerX" secondItem="6BM-rv-rih" secondAttribute="centerX" id="tdO-UB-2WW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="labelRating" destination="TQ4-4p-QdJ" id="6S2-d7-4df"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

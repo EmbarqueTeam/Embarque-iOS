@@ -12,6 +12,7 @@
 #import "EMSessionManager.h"
 
 #define CELL_FEEDBACK @"CellFeedback"
+#define CELL_RATING @"CellRating"
 
 @interface EMDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -45,7 +46,7 @@
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -66,7 +67,8 @@
         identifier = CELL_FEEDBACK;
         object = self.arrayFeedbacks[indexPath.row];
     }else{
-        
+        identifier = CELL_RATING;
+        object = self.airport;
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier
@@ -87,7 +89,11 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90.0f;
+    if (indexPath.section == 0) {
+        return 90.0f;
+    }else{
+        return 120.0f;
+    }
 }
 
 

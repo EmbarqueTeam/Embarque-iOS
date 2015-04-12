@@ -20,6 +20,7 @@
 		A789D03B1ADA220C00F9638E /* UIView+MXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0371ADA220C00F9638E /* UIView+MXAdditions.m */; };
 		A789D03E1ADA23FE00F9638E /* EMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D03D1ADA23FE00F9638E /* EMDetailViewController.m */; };
 		A789D0411ADA332400F9638E /* EMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0401ADA332400F9638E /* EMBaseViewController.m */; };
+		A789D0441ADA64F900F9638E /* EMCellRating.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0431ADA64F900F9638E /* EMCellRating.m */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -76,6 +77,8 @@
 		A789D03D1ADA23FE00F9638E /* EMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDetailViewController.m; sourceTree = "<group>"; };
 		A789D03F1ADA332400F9638E /* EMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseViewController.h; sourceTree = "<group>"; };
 		A789D0401ADA332400F9638E /* EMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseViewController.m; sourceTree = "<group>"; };
+		A789D0421ADA64F900F9638E /* EMCellRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCellRating.h; sourceTree = "<group>"; };
+		A789D0431ADA64F900F9638E /* EMCellRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCellRating.m; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				BAEA554B1AD9CFA700D8054F /* EMCellFeedback.m */,
 				BAEA55561AD9EBA000D8054F /* EMCellSend.h */,
 				BAEA55571AD9EBA000D8054F /* EMCellSend.m */,
+				A789D0421ADA64F900F9638E /* EMCellRating.h */,
+				A789D0431ADA64F900F9638E /* EMCellRating.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				BAFE54521AD979840095706C /* EMAirport.m in Sources */,
 				A789D0221AD9F9B300F9638E /* EMCellLoadingA.m in Sources */,
 				BAEA554F1AD9D0A400D8054F /* EMFeedbackItem.m in Sources */,
+				A789D0441ADA64F900F9638E /* EMCellRating.m in Sources */,
 				BAEA554C1AD9CFA700D8054F /* EMCellFeedback.m in Sources */,
 				BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */,
 				BAEA55461AD9C42800D8054F /* EMFeedbackViewController.m in Sources */,

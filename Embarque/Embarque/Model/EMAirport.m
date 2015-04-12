@@ -40,4 +40,13 @@
     
     return nil;
 }
+
+- (NSString *)getRateAverageString
+{
+    if (self.rateAverage) {
+        return self.rateAverage.stringValue;
+    }else{
+        return @"-";
+    }
+}
 @end
