@@ -157,6 +157,7 @@
                                             <outlet property="labelRatingPunctuality" destination="WfF-1S-OKE" id="B32-Kk-a1A"/>
                                             <outlet property="labelRatingSecurity" destination="Cab-0K-qH1" id="q7Z-S4-h9U"/>
                                             <outlet property="labelRatingWifi" destination="CBE-Sa-0nL" id="CpD-JO-luI"/>
+                                            <outlet property="labelTime" destination="9Ho-Yi-EzL" id="DSE-l1-KKK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

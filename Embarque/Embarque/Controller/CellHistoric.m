@@ -8,6 +8,7 @@
 
 #import "CellHistoric.h"
 #import "EMFeedback.h"
+#import "DateTools.h"
 @implementation CellHistoric
 
 - (void)awakeFromNib {
@@ -24,12 +25,13 @@
         EMFeedback *feedback = object;
         
         self.labelCompany.text = feedback.company;
-        self.labelRatingPunctuality.text = [NSString stringWithFormat:@"%@", feedback.punctuality];
-        self.labelRatingFood.text = [NSString stringWithFormat:@"%@", feedback.food];
-        self.labelRatingInformation.text = [NSString stringWithFormat:@"%@", feedback.information];
-        self.labelRatingConservation.text = [NSString stringWithFormat:@"%@", feedback.conservation];
-        self.labelRatingSecurity.text = [NSString stringWithFormat:@"%@", feedback.security];
-        self.labelRatingWifi.text = [NSString stringWithFormat:@"%@", feedback.wifi];
+        self.labelTime.text = [feedback.updatedAt timeAgoSinceNow];
+        self.labelRatingPunctuality.text = [NSString stringWithFormat:@"%@", feedback.punctuality ? feedback.punctuality : @0];
+        self.labelRatingFood.text = [NSString stringWithFormat:@"%@", feedback.food ? feedback.food : @0];
+        self.labelRatingInformation.text = [NSString stringWithFormat:@"%@", feedback.information ? feedback.information : @0];
+        self.labelRatingConservation.text = [NSString stringWithFormat:@"%@", feedback.conservation ? feedback.conservation : @0];
+        self.labelRatingSecurity.text = [NSString stringWithFormat:@"%@", feedback.security ? feedback.security : @0];
+        self.labelRatingWifi.text = [NSString stringWithFormat:@"%@", feedback.wifi ? feedback.wifi : @0];
     }
 }
 @end
