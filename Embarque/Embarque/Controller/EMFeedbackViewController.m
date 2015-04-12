@@ -66,6 +66,7 @@
 -(void)cellSend:(EMCellSend *)cellSend didTouchedSend:(UIButton *)btnSend
 {
     [[[EMSessionManager sharedInstance] feedbackToCreate] saveEventually];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Lazy loading
