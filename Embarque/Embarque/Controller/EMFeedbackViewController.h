@@ -7,6 +7,7 @@
 //
 
 #import "EMBaseViewController.h"
+#import <MXGoogleAnalytics/MXGoogleAnalytics.h>
 
 @interface EMFeedbackViewController : EMBaseViewController
 

@@ -33,6 +33,13 @@
     self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [MXGoogleAnalytics ga_trackScreen:@"Feedback Main Screen"];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -40,6 +47,8 @@
 - (void)cancelTouched
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"Feedback Main" action:@"Cancelled"];
 }
 #pragma mark - UITableViewDataSource & Delegates
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -76,6 +85,8 @@
 -(void)cellSend:(EMCellSend *)cellSend didTouchedSend:(UIButton *)btnSend
 {
     [[[EMSessionManager sharedInstance] feedbackToCreate] saveEventually];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"Feedback Main" action:@"Sent"];
 }
 
 #pragma mark - Lazy loading

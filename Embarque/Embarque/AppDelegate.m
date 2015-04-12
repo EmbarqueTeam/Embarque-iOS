@@ -14,6 +14,7 @@
 
 #define KEY_PARSE_APPLICATION_ID_DESENV @"KEnFNcnLArxlllOus00LNLjM6KosLi11tTJn7Aes"
 #define KEY_PARSE_CLIENT_KEY_DESENV     @"ZefV9QEgxnAnsHS8im6sg0R49evcyYOKVTWWsFDb"
+#define KEY_GOOGLE_ANALYTICS @"UA-61802899-1"
 
 @interface AppDelegate ()
 
@@ -30,6 +31,10 @@
     [Parse setApplicationId:KEY_PARSE_APPLICATION_ID_DESENV
                   clientKey:KEY_PARSE_CLIENT_KEY_DESENV];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    //GOOGLE ANALYTICS
+    [MXGoogleAnalytics ga_inicializeWithTrackingId:KEY_GOOGLE_ANALYTICS];
+    [MXGoogleAnalytics ga_trackApplicationLauchingWithOptions:launchOptions];
     
     [self setAppearanceToElements];
     

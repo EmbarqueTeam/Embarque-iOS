@@ -23,6 +23,13 @@
     [super viewDidLoad];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [MXGoogleAnalytics ga_trackScreen:@"Feedback Final Screen"];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -34,10 +41,14 @@
     [[[EMSessionManager sharedInstance] feedbackToCreate] saveEventually];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"Feedback Final" action:@"Sent"];
 }
 
 - (IBAction)btnSkipTouched:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"Feedback Final" action:@"Cancelled"];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MXGoogleAnalytics/MXGoogleAnalytics.h>
 
 @interface EMFinalFeedbackViewController : UIViewController
 

@@ -36,6 +36,13 @@
     self.tabBarController.navigationItem.title = self.airport.name;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [MXGoogleAnalytics ga_trackScreen:@"Detail Screen"];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -46,6 +53,8 @@
     UIStoryboard *feedbackStoryboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:[NSBundle mainBundle]];
     UINavigationController *navFeedback = [feedbackStoryboard instantiateViewControllerWithIdentifier:@"FeedbackNavigationController"];
     [self presentViewController:navFeedback animated:YES completion:nil];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"Detail" action:@"Plus Selected"];
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate

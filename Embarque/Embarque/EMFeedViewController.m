@@ -15,7 +15,7 @@
 #define CELL_EMPTY   @"CellEmptyB"
 #define CELL_HISTORY @"CellHistoric"
 
-@interface EMFeedViewController ()
+@interface EMFeedViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *arrayDataSource;
@@ -46,12 +46,21 @@
     self.tabBarController.navigationItem.title = self.airport.name;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [MXGoogleAnalytics ga_trackScreen:@"History Screen"];
+}
+
 #pragma mark - Actions
 - (IBAction)barButtonPlusTouched:(id)sender
 {
     UIStoryboard *feedbackStoryboard = [UIStoryboard storyboardWithName:@"Feedback" bundle:[NSBundle mainBundle]];
     UINavigationController *navFeedback = [feedbackStoryboard instantiateViewControllerWithIdentifier:@"FeedbackNavigationController"];
     [self presentViewController:navFeedback animated:YES completion:nil];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"History" action:@"Plus Selected"];
 }
 
 #pragma mark - Methods

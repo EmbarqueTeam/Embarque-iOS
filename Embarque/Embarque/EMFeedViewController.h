@@ -7,7 +7,8 @@
 //
 
 #import "EMBaseViewController.h"
+#import <MXGoogleAnalytics/MXGoogleAnalytics.h>
 
-@interface EMFeedViewController : EMBaseViewController <UITableViewDataSource, UITableViewDelegate>
+@interface EMFeedViewController : EMBaseViewController
 
 @end

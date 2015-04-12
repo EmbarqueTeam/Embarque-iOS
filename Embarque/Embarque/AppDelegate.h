@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <MXGoogleAnalytics/MXGoogleAnalytics.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -21,4 +22,8 @@
 //Push
 //Google Analytics
 //Custom Slider
+
+//Rate sem sombra
+//Slide tirar rastro
+//tabBar com background
 

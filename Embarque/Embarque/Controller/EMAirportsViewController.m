@@ -40,6 +40,13 @@
     [self loadAirports];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [MXGoogleAnalytics ga_trackScreen:@"Airports Screen"];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -143,6 +150,8 @@
     
     [self performSegueWithIdentifier:SEGUE_TABBAR
                               sender:nil];
+    
+    [MXGoogleAnalytics ga_trackEventWith:@"Airports" action:@"Airport Selected" label:airport.name];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
