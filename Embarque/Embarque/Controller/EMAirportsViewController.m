@@ -10,6 +10,9 @@
 #import "EMDataService.h"
 
 #define CELL_AIRPORT @"CellAirport"
+#define CELL_LOADING @"CellLoadingA"
+#define CELL_EMPTY   @"CellEmptyA"
+
 #define SEGUE_FEED   @"FeedSegue"
 
 @interface EMAirportsViewController ()
@@ -17,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *arrayDataSource;
 @property (assign, nonatomic) BOOL isLoading;
+@property (assign, nonatomic) BOOL isEmpty;
 
 @end
 
@@ -26,9 +30,13 @@
     [super viewDidLoad];
     
     self.arrayDataSource = [NSMutableArray new];
+    [self.arrayDataSource addObject:[NSNull null]];
     
     [self registerCellNib];
-    [self loadAirports];
+    //[self loadAirports];
+    
+    self.isLoading = true;
+    [self performSelector:@selector(loadAirports) withObject:nil afterDelay:3.0f];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +47,8 @@
 - (void)registerCellNib
 {
     [self.collectionView registerNib:[UINib nibWithNibName:CELL_AIRPORT bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_AIRPORT];
+    [self.collectionView registerNib:[UINib nibWithNibName:CELL_LOADING bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_LOADING];
+    [self.collectionView registerNib:[UINib nibWithNibName:CELL_EMPTY bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_EMPTY];
 }
 
 - (void)loadAirports
@@ -46,16 +56,23 @@
     self.isLoading = TRUE;
     
     [EMDataService getAllAirportsWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            [self.arrayDataSource removeAllObjects];
-            [self.arrayDataSource addObjectsFromArray:objects];
-
-            [self.collectionView reloadData];
-        }else{
+        if (error) {
             if (DEBUG) {
                 NSLog(@"%@", error.localizedDescription);
             }
         }
+        
+        [self.arrayDataSource removeAllObjects];
+        
+        if (objects && objects.count > 1) {
+            [self.arrayDataSource addObjectsFromArray:objects];
+            self.isEmpty = FALSE;
+        }else{
+            [self.arrayDataSource addObject:[NSNull null]];
+            self.isEmpty = TRUE;
+        }
+
+        [self.collectionView reloadData];
         
         self.isLoading = FALSE;
     }];
@@ -69,7 +86,17 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_AIRPORT
+    NSString *identifier = nil;
+    
+    if (self.isLoading) {
+        identifier = CELL_LOADING;
+    }else if (self.isEmpty){
+        identifier = CELL_EMPTY;
+    }else{
+        identifier = CELL_AIRPORT;
+    }
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier
                                                                            forIndexPath:indexPath];
     
     id objeto = [self.arrayDataSource objectAtIndex:indexPath.row];

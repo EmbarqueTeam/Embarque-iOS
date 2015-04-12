@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		20E67242ED49EFBFC76CBC3F /* libPods-Embarque.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F22208933B9394CA88667152 /* libPods-Embarque.a */; };
 		A789D01F1AD9D57D00F9638E /* EMFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D01E1AD9D57D00F9638E /* EMFeedViewController.m */; };
+		A789D0221AD9F9B300F9638E /* EMCellLoadingA.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0211AD9F9B300F9638E /* EMCellLoadingA.m */; };
+		A789D0261AD9FA7600F9638E /* CellLoadingA.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0251AD9FA7600F9638E /* CellLoadingA.xib */; };
+		A789D02A1AD9FBCA00F9638E /* EMCellEmptyA.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0281AD9FBCA00F9638E /* EMCellEmptyA.m */; };
+		A789D02B1AD9FBCA00F9638E /* CellEmptyA.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0291AD9FBCA00F9638E /* CellEmptyA.xib */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -38,6 +42,12 @@
 		A5E6299B68433D8825154728 /* Pods-Embarque.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embarque.release.xcconfig"; path = "Pods/Target Support Files/Pods-Embarque/Pods-Embarque.release.xcconfig"; sourceTree = "<group>"; };
 		A789D01D1AD9D57D00F9638E /* EMFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFeedViewController.h; sourceTree = "<group>"; };
 		A789D01E1AD9D57D00F9638E /* EMFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFeedViewController.m; sourceTree = "<group>"; };
+		A789D0201AD9F9B300F9638E /* EMCellLoadingA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCellLoadingA.h; sourceTree = "<group>"; };
+		A789D0211AD9F9B300F9638E /* EMCellLoadingA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCellLoadingA.m; sourceTree = "<group>"; };
+		A789D0251AD9FA7600F9638E /* CellLoadingA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellLoadingA.xib; sourceTree = "<group>"; };
+		A789D0271AD9FBCA00F9638E /* EMCellEmptyA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCellEmptyA.h; sourceTree = "<group>"; };
+		A789D0281AD9FBCA00F9638E /* EMCellEmptyA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCellEmptyA.m; sourceTree = "<group>"; };
+		A789D0291AD9FBCA00F9638E /* CellEmptyA.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellEmptyA.xib; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,6 +196,12 @@
 				BAFE545A1AD990850095706C /* EMCellAirport.h */,
 				BAFE545B1AD990850095706C /* EMCellAirport.m */,
 				BAFE54611AD9970B0095706C /* CellAirport.xib */,
+				A789D0201AD9F9B300F9638E /* EMCellLoadingA.h */,
+				A789D0211AD9F9B300F9638E /* EMCellLoadingA.m */,
+				A789D0251AD9FA7600F9638E /* CellLoadingA.xib */,
+				A789D0271AD9FBCA00F9638E /* EMCellEmptyA.h */,
+				A789D0281AD9FBCA00F9638E /* EMCellEmptyA.m */,
+				A789D0291AD9FBCA00F9638E /* CellEmptyA.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -284,10 +300,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A789D0261AD9FA7600F9638E /* CellLoadingA.xib in Resources */,
 				BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */,
 				BAFE54621AD9970B0095706C /* CellAirport.xib in Resources */,
 				BAEA55431AD9C00B00D8054F /* Feedback.storyboard in Resources */,
 				BA6B59301AD9507F00FC78F1 /* LaunchScreen.xib in Resources */,
+				A789D02B1AD9FBCA00F9638E /* CellEmptyA.xib in Resources */,
 				BA6B592D1AD9507F00FC78F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +358,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFE54601AD992B50095706C /* EMAirportsViewController.m in Sources */,
+				A789D02A1AD9FBCA00F9638E /* EMCellEmptyA.m in Sources */,
 				BAFE54521AD979840095706C /* EMAirport.m in Sources */,
+				A789D0221AD9F9B300F9638E /* EMCellLoadingA.m in Sources */,
 				BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */,
 				BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */,
 				BA6B59221AD9507F00FC78F1 /* main.m in Sources */,
