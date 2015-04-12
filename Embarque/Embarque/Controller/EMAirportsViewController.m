@@ -94,7 +94,7 @@
         
         [self.arrayDataSource removeAllObjects];
         
-        if (objects && objects.count > 1) {
+        if (objects && objects.count > 0) {
             [self.arrayDataSource addObjectsFromArray:objects];
             self.isEmpty = FALSE;
         }else{
