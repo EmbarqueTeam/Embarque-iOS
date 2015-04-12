@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B66EA07B5DDBD5271E6A4EBB"
+               BlueprintIdentifier = "7DD36B3F0E3463ADD552C2D9"
                BuildableName = "libPods-Embarque-UIColor-ColorWithHexAndAlpha.a"
                BlueprintName = "Pods-Embarque-UIColor-ColorWithHexAndAlpha"
                ReferencedContainer = "container:Pods.xcodeproj">

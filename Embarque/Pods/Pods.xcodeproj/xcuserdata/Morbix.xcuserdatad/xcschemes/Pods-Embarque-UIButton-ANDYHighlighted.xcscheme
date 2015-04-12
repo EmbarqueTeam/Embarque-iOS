@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BFDBD2A16506324935EA450"
+               BlueprintIdentifier = "4A5434B90A53C1A4F4BCEEF0"
                BuildableName = "libPods-Embarque-UIButton-ANDYHighlighted.a"
                BlueprintName = "Pods-Embarque-UIButton-ANDYHighlighted"
                ReferencedContainer = "container:Pods.xcodeproj">

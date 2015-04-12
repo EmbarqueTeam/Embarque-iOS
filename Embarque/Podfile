@@ -13,6 +13,7 @@ pod 'MXGoogleAnalytics'
 pod 'Lockbox'
 pod 'UIColor-ColorWithHexAndAlpha', '~> 1.2'
 pod 'UIButton-ANDYHighlighted'
+pod 'DateTools'
 
 end
 
