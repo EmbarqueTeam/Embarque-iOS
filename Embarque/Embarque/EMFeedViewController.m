@@ -41,7 +41,26 @@
     [self presentViewController:navFeedback animated:YES completion:nil];
 }
 
-#pragma mark - Datasour
+#pragma mark - Methods
+- (void)loadFeedbacksWithCache:(BOOL)cached
+{
+    [EMDataService getFeedbacksBySelectedAirportWithCache:cached
+                                                    block:^(NSArray *objects, NSError *error) {
+                                                        if (error) {
+                                                            if (DEBUG) {
+                                                                NSLog(@"%@", error.localizedDescription);
+                                                            }
+                                                        }
+                                                        
+                                                        [self.arrayDataSource removeAllObjects];
+                                                        
+                                                        [self.arrayDataSource addObjectsFromArray:objects];
+                                                        
+                                                        [self.tableView reloadData];
+                                                    }];
+}
+
+#pragma mark - UITableViewDataSource and UITableViewDelegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -66,23 +85,5 @@
     }
     
     return cell;
-}
-
-- (void)loadFeedbacksWithCache:(BOOL)cached
-{
-    [EMDataService getFeedbacksBySelectedAirportWithCache:cached
-                                                    block:^(NSArray *objects, NSError *error) {
-                                                        if (error) {
-                                                            if (DEBUG) {
-                                                                NSLog(@"%@", error.localizedDescription);
-                                                            }
-                                                        }
-                                                        
-                                                        [self.arrayDataSource removeAllObjects];
-                                                        
-                                                        [self.arrayDataSource addObjectsFromArray:objects];
-                                                        
-                                                        [self.tableView reloadData];
-                                                    }];
 }
 @end

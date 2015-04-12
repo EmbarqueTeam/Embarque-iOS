@@ -21,6 +21,8 @@
 		A789D03E1ADA23FE00F9638E /* EMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D03D1ADA23FE00F9638E /* EMDetailViewController.m */; };
 		A789D0411ADA332400F9638E /* EMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0401ADA332400F9638E /* EMBaseViewController.m */; };
 		A789D0441ADA64F900F9638E /* EMCellRating.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0431ADA64F900F9638E /* EMCellRating.m */; };
+		A789D0461ADA95AE00F9638E /* CellLoadingB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0451ADA95AE00F9638E /* CellLoadingB.xib */; };
+		A789D0481ADA962A00F9638E /* CellEmptyB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0471ADA962A00F9638E /* CellEmptyB.xib */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		A789D0401ADA332400F9638E /* EMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseViewController.m; sourceTree = "<group>"; };
 		A789D0421ADA64F900F9638E /* EMCellRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCellRating.h; sourceTree = "<group>"; };
 		A789D0431ADA64F900F9638E /* EMCellRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCellRating.m; sourceTree = "<group>"; };
+		A789D0451ADA95AE00F9638E /* CellLoadingB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellLoadingB.xib; sourceTree = "<group>"; };
+		A789D0471ADA962A00F9638E /* CellEmptyB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellEmptyB.xib; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -271,9 +275,11 @@
 				A789D0201AD9F9B300F9638E /* EMCellLoadingA.h */,
 				A789D0211AD9F9B300F9638E /* EMCellLoadingA.m */,
 				A789D0251AD9FA7600F9638E /* CellLoadingA.xib */,
+				A789D0451ADA95AE00F9638E /* CellLoadingB.xib */,
 				A789D0271AD9FBCA00F9638E /* EMCellEmptyA.h */,
 				A789D0281AD9FBCA00F9638E /* EMCellEmptyA.m */,
 				A789D0291AD9FBCA00F9638E /* CellEmptyA.xib */,
+				A789D0471ADA962A00F9638E /* CellEmptyB.xib */,
 				BAEA554A1AD9CFA700D8054F /* EMCellFeedback.h */,
 				BAEA554B1AD9CFA700D8054F /* EMCellFeedback.m */,
 				BAEA55561AD9EBA000D8054F /* EMCellSend.h */,
@@ -390,11 +396,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A789D0261AD9FA7600F9638E /* CellLoadingA.xib in Resources */,
+				A789D0461ADA95AE00F9638E /* CellLoadingB.xib in Resources */,
 				BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */,
 				BAFE54621AD9970B0095706C /* CellAirport.xib in Resources */,
 				BAEA55431AD9C00B00D8054F /* Feedback.storyboard in Resources */,
 				BA6B59301AD9507F00FC78F1 /* LaunchScreen.xib in Resources */,
 				A789D02B1AD9FBCA00F9638E /* CellEmptyA.xib in Resources */,
+				A789D0481ADA962A00F9638E /* CellEmptyB.xib in Resources */,
 				BA6B592D1AD9507F00FC78F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
