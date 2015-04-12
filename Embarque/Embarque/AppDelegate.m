@@ -60,7 +60,11 @@
 
 - (void)setAppearanceToElements
 {
-    UIColor *baseColor = [UIColor colorWithHex:@"61C2DB" andAlpha:1.0];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    //61C2DB - Original
+    //469CB5 - Original Darker
+    UIColor *baseColor = [UIColor colorWithHex:@"469CB5" andAlpha:1.0];
     
     // Changes appearance of NavigationController
     [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
