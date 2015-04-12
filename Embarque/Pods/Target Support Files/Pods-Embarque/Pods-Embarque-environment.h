@@ -66,3 +66,15 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 
+// UIButton-ANDYHighlighted
+#define COCOAPODS_POD_AVAILABLE_UIButton_ANDYHighlighted
+#define COCOAPODS_VERSION_MAJOR_UIButton_ANDYHighlighted 0
+#define COCOAPODS_VERSION_MINOR_UIButton_ANDYHighlighted 2
+#define COCOAPODS_VERSION_PATCH_UIButton_ANDYHighlighted 1
+
+// UIColor-ColorWithHexAndAlpha
+#define COCOAPODS_POD_AVAILABLE_UIColor_ColorWithHexAndAlpha
+#define COCOAPODS_VERSION_MAJOR_UIColor_ColorWithHexAndAlpha 1
+#define COCOAPODS_VERSION_MINOR_UIColor_ColorWithHexAndAlpha 2
+#define COCOAPODS_VERSION_PATCH_UIColor_ColorWithHexAndAlpha 0
+

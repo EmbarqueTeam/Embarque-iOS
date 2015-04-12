@@ -3,7 +3,7 @@ PODS:
   - Block-KVO (2.2.1)
   - Bolts (1.1.4)
   - GoogleAnalytics-iOS-SDK (3.10):
-    - GoogleAnalytics-iOS-SDK/Core (= 3.10)
+    - GoogleAnalytics-iOS-SDK/Core
   - GoogleAnalytics-iOS-SDK/Core (3.10)
   - Lockbox (2.1.0)
   - MXGoogleAnalytics (1.0.1):
@@ -11,8 +11,10 @@ PODS:
   - Parse (1.7.1):
     - Bolts (~> 1.1)
   - SDWebImage (3.7.2):
-    - SDWebImage/Core (= 3.7.2)
+    - SDWebImage/Core
   - SDWebImage/Core (3.7.2)
+  - UIButton-ANDYHighlighted (0.2.1)
+  - UIColor-ColorWithHexAndAlpha (1.2.0)
 
 DEPENDENCIES:
   - Appirater
@@ -21,6 +23,8 @@ DEPENDENCIES:
   - MXGoogleAnalytics
   - Parse (~> 1.7)
   - SDWebImage (~> 3.7)
+  - UIButton-ANDYHighlighted
+  - UIColor-ColorWithHexAndAlpha (~> 1.2)
 
 SPEC CHECKSUMS:
   Appirater: 8783318c36414e8de3ea023443028df94c1b784b
@@ -31,5 +35,7 @@ SPEC CHECKSUMS:
   MXGoogleAnalytics: 9029d27e6e1f0a4edc2b9e97d00566e634fa3a80
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+  UIButton-ANDYHighlighted: 3f5e9fb68fb3425bd9fddc030af452d3ac9d1613
+  UIColor-ColorWithHexAndAlpha: 9b7e9e8db3518367f8a5df503fd9a20113ee3d7f
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.34.4
