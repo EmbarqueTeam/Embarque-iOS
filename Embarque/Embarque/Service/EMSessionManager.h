@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EMAirport.h"
+
+@class EMFeedback;
 
 @interface EMSessionManager : NSObject
+
+@property (strong,nonatomic) EMAirport *selectedAirport;
+@property (strong,nonatomic) EMFeedback *feedbackToCreate;
++(EMSessionManager *)sharedInstance;
 
 @end

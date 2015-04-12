@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class EMFeedback;
+
 @interface EMCellFeedback : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *title;

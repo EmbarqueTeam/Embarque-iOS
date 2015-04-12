@@ -30,6 +30,7 @@
 		BAEA554F1AD9D0A400D8054F /* EMFeedbackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA554E1AD9D0A400D8054F /* EMFeedbackItem.m */; };
 		BAEA55581AD9EBA000D8054F /* EMCellSend.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA55571AD9EBA000D8054F /* EMCellSend.m */; };
 		BAEA555B1ADA049900D8054F /* EMSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA555A1ADA049900D8054F /* EMSessionManager.m */; };
+		BAEA555E1ADA0AC600D8054F /* EMFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEA555D1ADA0AC600D8054F /* EMFeedback.m */; };
 		BAFE54521AD979840095706C /* EMAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE54511AD979840095706C /* EMAirport.m */; };
 		BAFE54561AD97B380095706C /* EMDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE54551AD97B380095706C /* EMDataService.m */; };
 		BAFE545C1AD990850095706C /* EMCellAirport.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFE545B1AD990850095706C /* EMCellAirport.m */; };
@@ -90,6 +91,8 @@
 		BAEA55571AD9EBA000D8054F /* EMCellSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCellSend.m; path = View/EMCellSend.m; sourceTree = "<group>"; };
 		BAEA55591ADA049900D8054F /* EMSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMSessionManager.h; path = Service/EMSessionManager.h; sourceTree = "<group>"; };
 		BAEA555A1ADA049900D8054F /* EMSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMSessionManager.m; path = Service/EMSessionManager.m; sourceTree = "<group>"; };
+		BAEA555C1ADA0AC600D8054F /* EMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMFeedback.h; path = Model/EMFeedback.h; sourceTree = "<group>"; };
+		BAEA555D1ADA0AC600D8054F /* EMFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMFeedback.m; path = Model/EMFeedback.m; sourceTree = "<group>"; };
 		BAFE54501AD979840095706C /* EMAirport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMAirport.h; path = Model/EMAirport.h; sourceTree = "<group>"; };
 		BAFE54511AD979840095706C /* EMAirport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMAirport.m; path = Model/EMAirport.m; sourceTree = "<group>"; };
 		BAFE54541AD97B380095706C /* EMDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMDataService.h; path = Service/EMDataService.h; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				BAFE54511AD979840095706C /* EMAirport.m */,
 				BAEA554D1AD9D0A400D8054F /* EMFeedbackItem.h */,
 				BAEA554E1AD9D0A400D8054F /* EMFeedbackItem.m */,
+				BAEA555C1ADA0AC600D8054F /* EMFeedback.h */,
+				BAEA555D1ADA0AC600D8054F /* EMFeedback.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				BAFE54601AD992B50095706C /* EMAirportsViewController.m in Sources */,
 				A789D02A1AD9FBCA00F9638E /* EMCellEmptyA.m in Sources */,
 				BAEA555B1ADA049900D8054F /* EMSessionManager.m in Sources */,
+				BAEA555E1ADA0AC600D8054F /* EMFeedback.m in Sources */,
 				BAFE54521AD979840095706C /* EMAirport.m in Sources */,
 				A789D0221AD9F9B300F9638E /* EMCellLoadingA.m in Sources */,
 				BAEA554F1AD9D0A400D8054F /* EMFeedbackItem.m in Sources */,

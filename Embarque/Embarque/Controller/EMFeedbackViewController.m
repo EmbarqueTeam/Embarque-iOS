@@ -10,7 +10,8 @@
 #import "EMFeedbackItem.h"
 #import "EMCellSend.h"
 #import "EMCellFeedback.h"
-
+#import "EMSessionManager.h"
+#import "EMFeedback.h"
 @interface EMFeedbackViewController () <EMCellSendDelegate>
 
 @property (strong, nonatomic) NSArray *arrayFeedbacks;
@@ -22,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[EMSessionManager sharedInstance] setFeedbackToCreate:[EMFeedback new]];
+    [[[EMSessionManager sharedInstance] feedbackToCreate] setAirport:[[EMSessionManager sharedInstance] selectedAirport]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,20 +65,20 @@
 #pragma mark - CellSend Delegate
 -(void)cellSend:(EMCellSend *)cellSend didTouchedSend:(UIButton *)btnSend
 {
-    NSLog(@"CellSendTouched");
+    [[[EMSessionManager sharedInstance] feedbackToCreate] saveEventually];
 }
 
 #pragma mark - Lazy loading
 - (NSArray *)arrayFeedbacks
 {
     if (!_arrayFeedbacks) {
-        _arrayFeedbacks = @[[EMFeedbackItem newFeedbackItemWithTitle:@"Pontualidade" andImageName:@"Clock" andCellIdentifier:@"CellFeedback"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Informação e Atendimento" andImageName:@"Question" andCellIdentifier:@"CellFeedback"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Wifi e tomadas" andImageName:@"Wifi" andCellIdentifier:@"CellFeedback"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Praça de Alimentação" andImageName:@"Food" andCellIdentifier:@"CellFeedback"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Conservação e Limpeza" andImageName:@"TrashCan" andCellIdentifier:@"CellFeedback"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Segurança" andImageName:@"Security" andCellIdentifier:@"CellFeedback"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Enviar" andImageName:@"Enviar" andCellIdentifier:@"CellSend"]
+        _arrayFeedbacks = @[[EMFeedbackItem newFeedbackItemWithType:FeedbackTypePunctuality],
+                           [EMFeedbackItem newFeedbackItemWithType:FeedbackTypeInformation],
+                           [EMFeedbackItem newFeedbackItemWithType:FeedbackTypeWifi],
+                           [EMFeedbackItem newFeedbackItemWithType:FeedbackTypeFood],
+                           [EMFeedbackItem newFeedbackItemWithType:FeedbackTypeConservation],
+                           [EMFeedbackItem newFeedbackItemWithType:FeedbackTypeSecurity],
+                           [EMFeedbackItem newFeedbackItemWithType:FeedbackTypeButtonEnviar]
                            ];
     }
     

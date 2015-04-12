@@ -10,4 +10,30 @@
 
 @implementation EMSessionManager
 
++(EMSessionManager *)sharedInstance
+{
+    static EMSessionManager *sharedInstance = nil;
+    static dispatch_once_t pred;
+    
+    if (sharedInstance)
+        return sharedInstance;
+    
+    dispatch_once(&pred, ^{
+        sharedInstance = [EMSessionManager alloc];
+        sharedInstance = [sharedInstance init];
+    });
+    
+    return sharedInstance;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.selectedAirport = [[EMAirport alloc] init];
+        [self.selectedAirport setObjectId:@"5SkclJGjsC"];
+    }
+    return self;
+}
+
 @end
