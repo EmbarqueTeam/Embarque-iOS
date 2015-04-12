@@ -68,19 +68,19 @@
 
 - (void)loadFeedbacksWithCache:(BOOL)cached
 {
-    [EMDataService getFeedbacksBySelectedAirportWithCache:true block:^(NSArray * __nullable objects, NSError * __nullable error) {
-        if (error) {
-            if (DEBUG) {
-                NSLog(@"%@", error.localizedDescription);
-            }
-        }
-        
-        [self.arrayDataSource removeAllObjects];
-        
-        self.arrayDataSource  = objects;
-        
-        
-        [self.tableView reloadData];
-    } ];
+    [EMDataService getFeedbacksBySelectedAirportWithCache:cached
+                                                    block:^(NSArray *objects, NSError *error) {
+                                                        if (error) {
+                                                            if (DEBUG) {
+                                                                NSLog(@"%@", error.localizedDescription);
+                                                            }
+                                                        }
+                                                        
+                                                        [self.arrayDataSource removeAllObjects];
+                                                        
+                                                        [self.arrayDataSource addObjectsFromArray:objects];
+                                                        
+                                                        [self.tableView reloadData];
+                                                    }];
 }
 @end

@@ -15,8 +15,13 @@
 
 @end
 
-//Avaliação Geral na Tela Principal
-//Customização da TabBar
+//Default ACL
+//User Anonimous
 //Cloud Code
-//
+//Push
+//Google Analytics
+//Custom Slider
+//Pull To refresh no histórico
+//Feedback isEmpty e Loading no Histórico
+//Setar o Titulo da TabBar com nome dos Aeroporto
 
