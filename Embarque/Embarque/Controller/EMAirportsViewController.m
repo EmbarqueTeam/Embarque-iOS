@@ -58,6 +58,8 @@
     [self.refreshControl addTarget:self action:@selector(startRefresh)
              forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
+    
+    [self.collectionView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)startRefresh

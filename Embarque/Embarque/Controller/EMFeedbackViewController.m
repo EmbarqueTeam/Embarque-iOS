@@ -23,8 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [[EMSessionManager sharedInstance] setFeedbackToCreate:[EMFeedback new]];
     [[[EMSessionManager sharedInstance] feedbackToCreate] setAirport:[[EMSessionManager sharedInstance] selectedAirport]];
+    
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)didReceiveMemoryWarning {
