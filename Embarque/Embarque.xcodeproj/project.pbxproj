@@ -24,6 +24,7 @@
 		A789D0461ADA95AE00F9638E /* CellLoadingB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0451ADA95AE00F9638E /* CellLoadingB.xib */; };
 		A789D0481ADA962A00F9638E /* CellEmptyB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0471ADA962A00F9638E /* CellEmptyB.xib */; };
 		A789D04B1ADAA4B900F9638E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A789D04A1ADAA4B900F9638E /* Crashlytics.framework */; };
+		A789D04E1ADAB25A00F9638E /* EMBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D04D1ADAB25A00F9638E /* EMBaseTabBarController.m */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -86,6 +87,8 @@
 		A789D0451ADA95AE00F9638E /* CellLoadingB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellLoadingB.xib; sourceTree = "<group>"; };
 		A789D0471ADA962A00F9638E /* CellEmptyB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellEmptyB.xib; sourceTree = "<group>"; };
 		A789D04A1ADAA4B900F9638E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A789D04C1ADAB25A00F9638E /* EMBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseTabBarController.h; sourceTree = "<group>"; };
+		A789D04D1ADAB25A00F9638E /* EMBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseTabBarController.m; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -311,6 +314,8 @@
 				BAEA55601ADA3C7000D8054F /* EMFinalFeedbackViewController.m */,
 				A789D03F1ADA332400F9638E /* EMBaseViewController.h */,
 				A789D0401ADA332400F9638E /* EMBaseViewController.m */,
+				A789D04C1ADAB25A00F9638E /* EMBaseTabBarController.h */,
+				A789D04D1ADAB25A00F9638E /* EMBaseTabBarController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 				BAEA55611ADA3C7000D8054F /* EMFinalFeedbackViewController.m in Sources */,
 				BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */,
 				A789D0391ADA220C00F9638E /* NSNumber+MXAdditions.m in Sources */,
+				A789D04E1ADAB25A00F9638E /* EMBaseTabBarController.m in Sources */,
 				A789D03B1ADA220C00F9638E /* UIView+MXAdditions.m in Sources */,
 				BA6B59221AD9507F00FC78F1 /* main.m in Sources */,
 				A789D03E1ADA23FE00F9638E /* EMDetailViewController.m in Sources */,

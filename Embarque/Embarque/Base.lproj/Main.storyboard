@@ -351,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="658" y="181"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="4Yy-oI-d75">
             <objects>
-                <tabBarController id="4KN-pS-OnR" sceneMemberID="viewController">
+                <tabBarController id="4KN-pS-OnR" customClass="EMBaseTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ORJ-3g-vFd"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="WQY-qJ-pDN">
