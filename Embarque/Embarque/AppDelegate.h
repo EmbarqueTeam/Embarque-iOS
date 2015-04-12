@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <MXGoogleAnalytics/MXGoogleAnalytics.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

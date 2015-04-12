@@ -23,6 +23,7 @@
 		A789D0441ADA64F900F9638E /* EMCellRating.m in Sources */ = {isa = PBXBuildFile; fileRef = A789D0431ADA64F900F9638E /* EMCellRating.m */; };
 		A789D0461ADA95AE00F9638E /* CellLoadingB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0451ADA95AE00F9638E /* CellLoadingB.xib */; };
 		A789D0481ADA962A00F9638E /* CellEmptyB.xib in Resources */ = {isa = PBXBuildFile; fileRef = A789D0471ADA962A00F9638E /* CellEmptyB.xib */; };
+		A789D04B1ADAA4B900F9638E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A789D04A1ADAA4B900F9638E /* Crashlytics.framework */; };
 		BA6B59221AD9507F00FC78F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59211AD9507F00FC78F1 /* main.m */; };
 		BA6B59251AD9507F00FC78F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B59241AD9507F00FC78F1 /* AppDelegate.m */; };
 		BA6B592B1AD9507F00FC78F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6B59291AD9507F00FC78F1 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		A789D0431ADA64F900F9638E /* EMCellRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCellRating.m; sourceTree = "<group>"; };
 		A789D0451ADA95AE00F9638E /* CellLoadingB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellLoadingB.xib; sourceTree = "<group>"; };
 		A789D0471ADA962A00F9638E /* CellEmptyB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellEmptyB.xib; sourceTree = "<group>"; };
+		A789D04A1ADAA4B900F9638E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		BA6B591C1AD9507F00FC78F1 /* Embarque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embarque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6B59201AD9507F00FC78F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6B59211AD9507F00FC78F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A789D04B1ADAA4B900F9638E /* Crashlytics.framework in Frameworks */,
 				20E67242ED49EFBFC76CBC3F /* libPods-Embarque.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +158,7 @@
 		7A6004F63ABDFBCE871CE3BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A789D04A1ADAA4B900F9638E /* Crashlytics.framework */,
 				F22208933B9394CA88667152 /* libPods-Embarque.a */,
 			);
 			name = Frameworks;
@@ -323,6 +327,7 @@
 				BA6B59191AD9507F00FC78F1 /* Frameworks */,
 				BA6B591A1AD9507F00FC78F1 /* Resources */,
 				C9CCEC047FE5CDCD95769F86 /* Copy Pods Resources */,
+				A789D0491ADAA49F00F9638E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -431,6 +436,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		A789D0491ADAA49F00F9638E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 4e076605a89bca6719313424e40c17037f78bc19 663eac06ae3e0aa11f7393b84decef04409c436d547f97f592b25dc5e5e31e08";
 		};
 		C9CCEC047FE5CDCD95769F86 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -606,6 +624,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Embarque/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -623,6 +645,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Embarque/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

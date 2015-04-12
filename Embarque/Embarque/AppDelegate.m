@@ -25,6 +25,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crashlytics startWithAPIKey:@"4e076605a89bca6719313424e40c17037f78bc19"];
+    
     [EMAirport registerSubclass];
     [EMFeedback registerSubclass];
     
