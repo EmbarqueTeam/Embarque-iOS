@@ -52,7 +52,26 @@
             </objects>
             <point key="canvasLocation" x="-289" y="487"/>
         </scene>
-        <!--Item 2-->
+        <!--Histórico-->
+        <scene sceneID="EST-Z7-bdw">
+            <objects>
+                <viewController id="jvM-tb-eUN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5QD-Ax-bAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="z02-pr-TJZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cmZ-0x-aTW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Histórico" image="tab_history" id="dUb-yQ-maE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVX-Ay-zaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="841"/>
+        </scene>
+        <!--Relatar-->
         <scene sceneID="xr5-9k-k32">
             <objects>
                 <viewController id="VVa-18-49Z" sceneMemberID="viewController">
@@ -65,16 +84,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="bDg-am-rz6"/>
+                    <tabBarItem key="tabBarItem" title="Relatar" image="tab_pen" id="bDg-am-rz6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFk-mQ-HvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="803"/>
+            <point key="canvasLocation" x="1085" y="491"/>
         </scene>
-        <!--Item 1-->
+        <!--Detalhes-->
         <scene sceneID="p1Z-cf-aAv">
             <objects>
-                <viewController id="bC8-8S-0gm" sceneMemberID="viewController">
+                <viewController id="bC8-8S-0gm" customClass="EMDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vU0-XV-2Rf"/>
                         <viewControllerLayoutGuide type="bottom" id="n6w-kS-vZr"/>
@@ -84,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Cdv-vZ-yBA"/>
+                    <tabBarItem key="tabBarItem" title="Detalhes" image="tab_badge" id="Cdv-vZ-yBA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXU-jD-xeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,6 +123,7 @@
                     <connections>
                         <segue destination="bC8-8S-0gm" kind="relationship" relationship="viewControllers" id="46y-l9-RFT"/>
                         <segue destination="VVa-18-49Z" kind="relationship" relationship="viewControllers" id="ZF7-wH-xxu"/>
+                        <segue destination="jvM-tb-eUN" kind="relationship" relationship="viewControllers" id="ZqN-TT-WBz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aN-pF-Xg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,6 +149,11 @@
             <point key="canvasLocation" x="-702" y="487"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_badge" width="32" height="32"/>
+        <image name="tab_history" width="32" height="32"/>
+        <image name="tab_pen" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
