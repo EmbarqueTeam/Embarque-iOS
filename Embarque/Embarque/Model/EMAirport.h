@@ -14,6 +14,13 @@
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) PFGeoPoint *location;
 @property (strong, nonatomic) PFFile *cover;
+@property (strong, nonatomic) NSNumber *rateAverage;
+@property (strong, nonatomic) NSNumber *conservation;
+@property (strong, nonatomic) NSNumber *food;
+@property (strong, nonatomic) NSNumber *information;
+@property (strong, nonatomic) NSNumber *punctuality;
+@property (strong, nonatomic) NSNumber *security;
+@property (strong, nonatomic) NSNumber *wifi;
 
 -(NSURL *)coverURL;
 @end

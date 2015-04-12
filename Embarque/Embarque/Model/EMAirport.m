@@ -14,6 +14,13 @@
 @dynamic city;
 @dynamic location;
 @dynamic cover;
+@dynamic rateAverage;
+@dynamic conservation;
+@dynamic food;
+@dynamic information;
+@dynamic punctuality;
+@dynamic security;
+@dynamic wifi;
 
 +(NSString *)parseClassName
 {

@@ -25,7 +25,8 @@ typedef NS_ENUM(NSUInteger, FeedbackType) {
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *cellIdentifier;
 @property (assign, nonatomic) FeedbackType type;
+@property (strong, nonatomic) NSNumber *rating;
 
 +(instancetype)newFeedbackItemWithType:(FeedbackType)type;
-
++(instancetype)newFeedbackItemWithType:(FeedbackType)type rating:(NSNumber *)rating;
 @end

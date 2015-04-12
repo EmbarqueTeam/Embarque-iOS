@@ -21,6 +21,15 @@
     return item;
 }
 
++(instancetype)newFeedbackItemWithType:(FeedbackType)type rating:(NSNumber *)rating
+{
+    EMFeedbackItem *item = [EMFeedbackItem newFeedbackItemWithType:type];
+    
+    item.rating = rating;
+    
+    return item;
+}
+
 +(instancetype)newFeedbackItemWithType:(FeedbackType)type
 {
     EMFeedbackItem *item = [[EMFeedbackItem alloc] init];
@@ -32,7 +41,7 @@
     
     switch (type) {
         case FeedbackTypeWifi:
-            title = @"Wifi e tomadas";
+            title = @"Wifi e Tomadas";
             imageName = @"Wifi";
             break;
         case FeedbackTypePunctuality:
@@ -52,7 +61,7 @@
             imageName = @"Security";
             break;
         case FeedbackTypeInformation:
-            title = @"Informação e atendimento";
+            title = @"Informação e Atendimento";
             imageName = @"Question";
             break;
         case FeedbackTypeButtonEnviar:
