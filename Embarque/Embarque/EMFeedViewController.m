@@ -14,6 +14,8 @@
 {
     [super viewDidLoad];
     
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonPlusTouched:)];
+    [self.tabBarController.navigationItem setRightBarButtonItem:barButton];
 }
 
 #pragma mark - Actions

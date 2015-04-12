@@ -28,6 +28,9 @@
     // Do any additional setup after loading the view.
     
     [self.tableView setBackgroundColor:[UIColor clearColor]];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonPlusTouched:)];
+    [self.tabBarController.navigationItem setRightBarButtonItem:barButton];
 }
 
 - (void)didReceiveMemoryWarning {

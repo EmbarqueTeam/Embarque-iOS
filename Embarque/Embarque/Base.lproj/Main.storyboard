@@ -52,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="-289" y="487"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Histórico-->
         <scene sceneID="EST-Z7-bdw">
             <objects>
                 <viewController id="jvM-tb-eUN" customClass="EMFeedViewController" sceneMemberID="viewController">
@@ -61,10 +61,11 @@
                         <viewControllerLayoutGuide type="bottom" id="z02-pr-TJZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cmZ-0x-aTW">
-                        <rect key="frame" x="0.0" y="64" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Histórico" image="tab_history" id="vMQ-qV-Xvr"/>
                     <navigationItem key="navigationItem" id="2xe-q2-cez">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WSN-tH-EMf">
                             <connections>
@@ -75,9 +76,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVX-Ay-zaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="841"/>
+            <point key="canvasLocation" x="658" y="835"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detalhes-->
         <scene sceneID="p1Z-cf-aAv">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="bC8-8S-0gm" customClass="EMDetailViewController" sceneMemberID="viewController">
@@ -86,11 +87,11 @@
                         <viewControllerLayoutGuide type="bottom" id="n6w-kS-vZr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NER-lg-o5W">
-                        <rect key="frame" x="0.0" y="64" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-Wr-vMB">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellFeedback" rowHeight="90" id="4ou-1u-gwe" customClass="EMCellFeedback">
@@ -220,6 +221,7 @@
                             <constraint firstItem="n6w-kS-vZr" firstAttribute="top" secondItem="6Dh-Wr-vMB" secondAttribute="bottom" id="aVs-2c-AwG"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Detalhes" image="tab_badge" id="470-u5-h5I"/>
                     <navigationItem key="navigationItem" id="Fea-Ec-33f">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QJd-ht-5cV">
                             <connections>
@@ -233,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXU-jD-xeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="179"/>
+            <point key="canvasLocation" x="658" y="181"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4Yy-oI-d75">
@@ -247,13 +249,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="pwM-UE-6ma" kind="relationship" relationship="viewControllers" id="46y-l9-RFT"/>
-                        <segue destination="Xu5-eq-zh7" kind="relationship" relationship="viewControllers" id="ZqN-TT-WBz"/>
+                        <segue destination="bC8-8S-0gm" kind="relationship" relationship="viewControllers" id="spm-Gk-dBt"/>
+                        <segue destination="jvM-tb-eUN" kind="relationship" relationship="viewControllers" id="byZ-IW-N31"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aN-pF-Xg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="491"/>
+            <point key="canvasLocation" x="211" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lZI-xu-Efn">
@@ -272,44 +274,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxT-Hv-ag8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-702" y="487"/>
-        </scene>
-        <!--Detalhes-->
-        <scene sceneID="P6c-f0-uv7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pwM-UE-6ma" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Detalhes" image="tab_badge" id="Cdv-vZ-yBA"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ppi-HU-Z64">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bC8-8S-0gm" kind="relationship" relationship="rootViewController" id="QfV-58-l5I"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JpG-RB-ZPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="742" y="179"/>
-        </scene>
-        <!--Histórico-->
-        <scene sceneID="6bj-tN-b0V">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xu5-eq-zh7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Histórico" image="tab_history" id="dUb-yQ-maE"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R5b-pD-Kx4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jvM-tb-eUN" kind="relationship" relationship="rootViewController" id="1Kf-LN-Bnb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uJO-iB-2dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="742" y="841"/>
         </scene>
     </scenes>
     <resources>
