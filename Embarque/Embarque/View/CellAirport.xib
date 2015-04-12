@@ -14,13 +14,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-or-WJy">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-or-WJy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw3-6J-wZi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="wYI-LP-DjL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                     </imageView>
@@ -39,16 +35,12 @@
                 <constraint firstItem="oRw-RE-kcx" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="1Zh-d2-6YI"/>
                 <constraint firstAttribute="trailing" secondItem="wYI-LP-DjL" secondAttribute="trailing" id="5wn-bS-alj"/>
                 <constraint firstAttribute="bottom" secondItem="uL0-or-WJy" secondAttribute="bottom" id="FPg-pD-OxM"/>
-                <constraint firstItem="lw3-6J-wZi" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="Jv0-h8-cTb"/>
-                <constraint firstAttribute="trailing" secondItem="lw3-6J-wZi" secondAttribute="trailing" id="Nfe-ph-duL"/>
                 <constraint firstItem="uL0-or-WJy" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="RfH-xs-xUY"/>
                 <constraint firstItem="oRw-RE-kcx" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" constant="15" id="UKe-YY-B3A"/>
-                <constraint firstAttribute="bottom" secondItem="lw3-6J-wZi" secondAttribute="bottom" id="WHG-9o-V4f"/>
                 <constraint firstAttribute="trailing" secondItem="uL0-or-WJy" secondAttribute="trailing" id="czw-5f-TTS"/>
                 <constraint firstAttribute="bottom" secondItem="wYI-LP-DjL" secondAttribute="bottom" id="f4E-PY-EBs"/>
                 <constraint firstItem="wYI-LP-DjL" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="f6P-xQ-jRE"/>
                 <constraint firstItem="wYI-LP-DjL" firstAttribute="top" secondItem="zg1-ym-c15" secondAttribute="top" id="fU1-YP-KaB"/>
-                <constraint firstItem="lw3-6J-wZi" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="ffU-rC-jqU"/>
                 <constraint firstItem="uL0-or-WJy" firstAttribute="leading" secondItem="zg1-ym-c15" secondAttribute="leading" id="hkX-5R-FgI"/>
                 <constraint firstAttribute="trailing" secondItem="oRw-RE-kcx" secondAttribute="trailing" constant="60" id="kXO-H2-P7U"/>
                 <constraint firstAttribute="bottom" secondItem="oRw-RE-kcx" secondAttribute="bottom" id="pFv-b8-RLZ"/>
@@ -62,6 +54,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="shadow" width="100" height="35"/>
+        <image name="shadow" width="13" height="100"/>
     </resources>
 </document>

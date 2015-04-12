@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "fotoSombra.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "fotoSombra@2x.png"
+      "filename" : "back@2x.png"
     },
     {
       "idiom" : "universal",
