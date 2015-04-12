@@ -19,5 +19,7 @@
 @property (strong, nonatomic) NSNumber *food;
 @property (strong, nonatomic) NSNumber *conservation;
 @property (strong, nonatomic) NSNumber *security;
+@property (strong, nonatomic) NSString *company;
+@property (strong, nonatomic) NSString *flight;
 
 @end

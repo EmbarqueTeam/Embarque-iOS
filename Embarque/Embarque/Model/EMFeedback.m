@@ -17,6 +17,8 @@
 @dynamic food;
 @dynamic conservation;
 @dynamic security;
+@dynamic company;
+@dynamic flight;
 
 +(NSString *)parseClassName
 {
