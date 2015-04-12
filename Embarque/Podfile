@@ -11,6 +11,8 @@ pod 'Block-KVO'
 pod 'Appirater'
 pod 'MXGoogleAnalytics'
 pod 'Lockbox'
+pod 'UIColor-ColorWithHexAndAlpha', '~> 1.2'
+pod 'UIButton-ANDYHighlighted'
 
 end
 

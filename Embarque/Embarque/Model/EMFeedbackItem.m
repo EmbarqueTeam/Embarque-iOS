@@ -10,12 +10,13 @@
 
 @implementation EMFeedbackItem
 
-+(instancetype)newFeedbackItemWithTitle:(NSString *)title andImageName:(NSString *)imageName
++(instancetype)newFeedbackItemWithTitle:(NSString *)title andImageName:(NSString *)imageName andCellIdentifier:(NSString *)cellIdentifier
 {
     EMFeedbackItem *item = [[EMFeedbackItem alloc] init];
     
     item.title = title;
     item.imageName = imageName;
+    item.cellIdentifier = cellIdentifier;
     
     return item;
 }

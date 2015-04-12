@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "EMDataService.h"
 #import "EMAirport.h"
+#import "UIColor+ColorWithHexAndAlpha.h"
 
 #define KEY_PARSE_APPLICATION_ID_DESENV @"KEnFNcnLArxlllOus00LNLjM6KosLi11tTJn7Aes"
 #define KEY_PARSE_CLIENT_KEY_DESENV     @"ZefV9QEgxnAnsHS8im6sg0R49evcyYOKVTWWsFDb"
@@ -27,6 +28,8 @@
     [Parse setApplicationId:KEY_PARSE_APPLICATION_ID_DESENV
                   clientKey:KEY_PARSE_CLIENT_KEY_DESENV];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [self setAppearanceToElements];
     
     return YES;
 }
@@ -51,6 +54,17 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setAppearanceToElements
+{
+    UIColor *baseColor = [UIColor colorWithHex:@"61C2DB" andAlpha:1.0];
+    
+    // Changes appearance of NavigationController
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
+    [[UINavigationBar appearance] setBarTintColor:baseColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
 }
 
 @end

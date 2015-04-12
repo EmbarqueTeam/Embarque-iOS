@@ -8,8 +8,10 @@
 
 #import "EMFeedbackViewController.h"
 #import "EMFeedbackItem.h"
+#import "EMCellSend.h"
+#import "EMCellFeedback.h"
 
-@interface EMFeedbackViewController ()
+@interface EMFeedbackViewController () <EMCellSendDelegate>
 
 @property (strong, nonatomic) NSArray *arrayFeedbacks;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -39,9 +41,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellFeedback" forIndexPath:indexPath];
-    
     id objeto = [self.arrayFeedbacks objectAtIndex:indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[objeto cellIdentifier] forIndexPath:indexPath];
+    
+    if ([[objeto cellIdentifier] isEqualToString:@"CellSend"]) {
+        [(EMCellSend *)cell setDelegate:self];
+    }
     
     SEL selector = NSSelectorFromString(@"configureWithObject:target:indexPath:");
     IMP imp = [cell methodForSelector:selector];
@@ -53,16 +59,23 @@
     return cell;
 }
 
+#pragma mark - CellSend Delegate
+-(void)cellSend:(EMCellSend *)cellSend didTouchedSend:(UIButton *)btnSend
+{
+    NSLog(@"CellSendTouched");
+}
+
 #pragma mark - Lazy loading
 - (NSArray *)arrayFeedbacks
 {
     if (!_arrayFeedbacks) {
-        _arrayFeedbacks = @[[EMFeedbackItem newFeedbackItemWithTitle:@"Pontualidade" andImageName:@"Clock"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Informação e Atendimento" andImageName:@"Question"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Wifi e tomadas" andImageName:@"Wifi"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Praça de Alimentação" andImageName:@"Food"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Conservação e Limpeza" andImageName:@"TrashCan"],
-                           [EMFeedbackItem newFeedbackItemWithTitle:@"Segurança" andImageName:@"Security"]
+        _arrayFeedbacks = @[[EMFeedbackItem newFeedbackItemWithTitle:@"Pontualidade" andImageName:@"Clock" andCellIdentifier:@"CellFeedback"],
+                           [EMFeedbackItem newFeedbackItemWithTitle:@"Informação e Atendimento" andImageName:@"Question" andCellIdentifier:@"CellFeedback"],
+                           [EMFeedbackItem newFeedbackItemWithTitle:@"Wifi e tomadas" andImageName:@"Wifi" andCellIdentifier:@"CellFeedback"],
+                           [EMFeedbackItem newFeedbackItemWithTitle:@"Praça de Alimentação" andImageName:@"Food" andCellIdentifier:@"CellFeedback"],
+                           [EMFeedbackItem newFeedbackItemWithTitle:@"Conservação e Limpeza" andImageName:@"TrashCan" andCellIdentifier:@"CellFeedback"],
+                           [EMFeedbackItem newFeedbackItemWithTitle:@"Segurança" andImageName:@"Security" andCellIdentifier:@"CellFeedback"],
+                           [EMFeedbackItem newFeedbackItemWithTitle:@"Enviar" andImageName:@"Enviar" andCellIdentifier:@"CellSend"]
                            ];
     }
     

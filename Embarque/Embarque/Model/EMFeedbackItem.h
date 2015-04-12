@@ -12,7 +12,8 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *imageName;
+@property (strong, nonatomic) NSString *cellIdentifier;
 
-+(instancetype)newFeedbackItemWithTitle:(NSString *)title andImageName:(NSString *)imageName;
++(instancetype)newFeedbackItemWithTitle:(NSString *)title andImageName:(NSString *)imageName andCellIdentifier:(NSString *)cellIdentifier;
 
 @end
