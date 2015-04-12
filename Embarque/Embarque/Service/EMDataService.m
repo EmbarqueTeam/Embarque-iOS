@@ -8,6 +8,7 @@
 
 #import "EMDataService.h"
 #import "EMAirport.h"
+#import "EMSessionManager.h"
 
 @implementation EMDataService
 
@@ -16,6 +17,21 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Airport"];
     
+    if (cached) {
+        [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
+    }else{
+        [query setCachePolicy:kPFCachePolicyNetworkOnly];
+    }
+    
+    
+    [query findObjectsInBackgroundWithBlock:block];
+}
+
++ (void)getFeedbacksBySelectedAirportWithCache:(BOOL)cached block:(PFArrayResultBlock)block
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Feedback"];
+    [query whereKey:@"airport" equalTo:[[EMSessionManager sharedInstance] selectedAirport]];
+    [query orderByDescending:@"updatedAt"];
     if (cached) {
         [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
     }else{

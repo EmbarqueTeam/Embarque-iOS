@@ -8,6 +8,6 @@
 
 #import "EMBaseViewController.h"
 
-@interface EMFeedViewController : EMBaseViewController
+@interface EMFeedViewController : EMBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
