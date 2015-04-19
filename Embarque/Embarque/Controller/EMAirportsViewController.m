@@ -120,12 +120,11 @@
             [self.arrayDataSource addObject:[NSNull null]];
             self.isEmpty = TRUE;
         }
-
-        
-        [self reloadData];
         
         self.isLoading = FALSE;
         [self.refreshControl endRefreshing];
+        
+        [self reloadData];
     }];
 }
 

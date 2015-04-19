@@ -22,6 +22,7 @@
 @dynamic punctuality;
 @dynamic security;
 @dynamic wifi;
+@dynamic distance_ios;
 
 +(NSString *)parseClassName
 {

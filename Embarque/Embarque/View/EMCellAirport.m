@@ -41,8 +41,8 @@
         }
         
         self.labelRating.text = [airport getRateAverageString];
-        [self.labelRating.layer setMasksToBounds:YES];
-        [self.labelRating.layer setCornerRadius:10.0f];
+        //[self.labelRating.layer setMasksToBounds:YES];
+        //[self.labelRating.layer setCornerRadius:10.0f];
     }
 }
 
