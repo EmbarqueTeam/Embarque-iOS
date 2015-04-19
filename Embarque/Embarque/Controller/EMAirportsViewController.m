@@ -11,6 +11,7 @@
 #import "UIScreen+MXAdditions.h"
 #import "EMAirport.h"
 #import "EMSessionManager.h"
+#import "NSMutableArray+MXAdditions.h"
 
 #define CELL_AIRPORT @"CellAirport"
 #define CELL_LOADING @"CellLoadingA"
@@ -25,7 +26,7 @@
 @property (assign, nonatomic) BOOL isLoading;
 @property (assign, nonatomic) BOOL isEmpty;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
-
+@property (strong, nonatomic) PFGeoPoint *currentUserLocation;
 @end
 
 @implementation EMAirportsViewController
@@ -38,6 +39,7 @@
     
     [self configureCollection];
     [self loadAirports];
+    [self getUserLocation];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -57,6 +59,23 @@
 }
 
 #pragma mark - Methods
+- (void)getUserLocation
+{
+    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+        
+        if (error) {
+            if (DEBUG) {
+                NSLog(@"%@", error.localizedDescription);
+            }
+        }
+        
+        if (geoPoint) {
+            self.currentUserLocation = geoPoint;
+        }
+        
+        [self reloadData];
+    }];
+}
 - (void)configureCollection
 {
     [self.collectionView registerNib:[UINib nibWithNibName:CELL_AIRPORT bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:CELL_AIRPORT];
@@ -103,12 +122,42 @@
         }
 
         
-        [self.collectionView reloadData];
+        [self reloadData];
         
         self.isLoading = FALSE;
         [self.refreshControl endRefreshing];
     }];
 }
+
+- (void)reloadData
+{
+    [self updateAllDistances];
+    
+    [self sortLocaisByDistance];
+    
+    [self.collectionView reloadData];
+}
+
+- (void)updateAllDistances
+{
+    if (self.isLoading || self.isEmpty) {
+        return;
+    }
+    
+    for (EMAirport *airport in self.arrayDataSource) {
+        [airport updateDistanceWithPoint:self.currentUserLocation];
+    }
+}
+
+- (void)sortLocaisByDistance
+{
+    if (self.isLoading || self.isEmpty) {
+        return;
+    }
+    
+    [self.arrayDataSource mx_sortWithAttribute:@"distance_ios" andAscending:YES];
+}
+
 
 #pragma mark - UICollectionViewDataSource and UICollectionViewDelegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

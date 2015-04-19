@@ -22,7 +22,10 @@
 @property (strong, nonatomic) NSNumber *security;
 @property (strong, nonatomic) NSNumber *wifi;
 
--(NSURL *)coverURL;
+@property (assign, nonatomic) float distance_ios;
+
+- (NSURL *)coverURL;
 - (NSString *)getRateAverageString;
+- (void)updateDistanceWithPoint:(PFGeoPoint *)point;
 
 @end

@@ -58,4 +58,13 @@
         return [NSString stringWithFormat:@"%@.0",result];
     }
 }
+
+- (void)updateDistanceWithPoint:(PFGeoPoint *)point
+{
+    if (point) {
+        self.distance_ios = [point distanceInKilometersTo:self.location];
+    }else{
+        self.distance_ios = 0;
+    }
+}
 @end
